@@ -1,20 +1,10 @@
 @import "vars";
 @import "libs";
 @import "fonts";
-
-html{
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after{
-    box-sizing: inherit;
-}
+@import "global";
+@import "../blocks/header/header.scss";
 
 
 
 
 
-// MEDIA
-@import "media";

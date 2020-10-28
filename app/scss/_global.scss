@@ -1,0 +1,23 @@
+html{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1370px;
+}
