@@ -68,18 +68,17 @@
                 </form>
 
                 <div class="header__content-box">
+                    <ul class="header__user-list">
+                        <li class="header__user-item">
+                            <a href="#">Вход</a>
+                        </li>
+                        <li class="header__user-item">
+                            <a href="#">Регистрация</a>
+                        </li>
+                    </ul>
                     <button class="header__content-item user active">
                         <span class="header__content-icon" style="background-position: -4px -4px;"></span>
                         <span class="header__content-item-text">Мой кабинет</span>
-
-                        <ul class="header__user-list">
-                            <li class="header__user-item">
-                                <a href="#">Вход</a>
-                            </li>
-                            <li class="header__user-item">
-                                <a href="#">Регистрация</a>
-                            </li>
-                        </ul>
                     </button>
                     <a class="header__content-item" href="#">
                         <span class="header__content-icon" style="background-position: -4px -44px;">
@@ -95,7 +94,7 @@
                     </a>
                 </div>
 
-
+                @@include("../menu-list/_menu-list.html")
                 
             </div>
         </div>
