@@ -12,6 +12,7 @@
 .menu-list__item {
     max-width: 163px;
     min-width: 70px;
+    text-align: center;
 
     &:hover {
         .menu-list__link {
@@ -38,7 +39,7 @@
     padding-bottom: 14px;
     display: inline-block;
     color: $dark;
-    transition: all .3s;
+    transition: color .3s;
 }
 .menu-list__item>.menu-list__btn {
     display: none;
@@ -96,14 +97,21 @@
 }
 .menu-down__col {
     width: 25%;
+    padding-right: 10px;
 }
 .menu-down__item {
+    text-align: left;
 
     &.active {
         .menu-down__link {
             color: $red;
         }
     }
+}
+.menu-down__item-inner {
+    display: inline-block;
+    position: relative;
+    padding-right: 30px;
 }
 .menu-down__link {
     text-decoration: none;
@@ -118,8 +126,11 @@
         color: $red;
     }
 }
-.menu-down__item>.menu-list__btn {
+.menu-down__item-inner>.menu-list__btn {
     margin-left: 10px;
+    position: absolute;
+    top: 8px;
+    right: 0;
 }
 // start menu-col
 .menu-col {
@@ -143,3 +154,34 @@
 }
 // end menu-col
 // end menu drop down
+
+// start header fixed menu
+.header__content.header__content--fixed {
+    .menu-list {
+        order: -1;
+        max-width: 995px;
+        margin-top: 22px;
+    }
+    .menu-list__item {
+        max-width: 130px;
+    }
+    .menu-list__link {
+        font-size: 12px;
+        line-height: 21px;
+    }
+    .menu-down {
+        top: 63px;
+    }
+    .menu-down__link {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .menu-down__item-inner>.menu-list__btn {
+        top: 5px;
+    }
+    .menu-col__link {
+        font-size: 12px;
+        line-height: 25px;
+    }
+}
+// end header fixed menu

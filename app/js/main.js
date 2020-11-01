@@ -3,7 +3,7 @@
 
 $(function () {
     // header lang
-    $('.header__lang-item a').click(function() {
+    $('.header__lang-item a').click(function () {
         $('.header__lang-item').removeClass("active");
         $(this).parent().addClass("active");
     })
@@ -12,19 +12,29 @@ $(function () {
         $('.header__user-list').toggleClass('active');
     })
 
-    $(document).mouseup(function (e) { 
-        if (!$(".header__content-item.user").is(e.target) && 
-            $(".header__content-item.user").has(e.target).length === 0) { 
+    $(document).mouseup(function (e) {
+        if (!$(".header__content-item.user").is(e.target) &&
+            $(".header__content-item.user").has(e.target).length === 0) {
             $(".header__user-list").removeClass('active');
         }
     });
 
     // menu list btn
-    $('.menu-down .menu-list__btn').click(function() {
+    $('.menu-down .menu-list__btn').click(function () {
         $(this).parent().toggleClass('active');
         $(this).toggleClass('active');
-        $(this).next().slideToggle();
+        $(this).parent().next().slideToggle();
     })
+
+    // scroll, fixed header
+    $(window).scroll(function () {
+        let top = $(document).scrollTop();
+        if (top > 0) {
+            $(".header__content").addClass(' header__content--fixed');
+        } else {
+            $(".header__content").removeClass(' header__content--fixed');
+        }
+    });
        
     
 

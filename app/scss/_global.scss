@@ -9,6 +9,11 @@ html{
     box-sizing: inherit;
 }
 
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
