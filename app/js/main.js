@@ -19,6 +19,11 @@ $(function () {
         }
     });
 
+    // header btn
+    $('.header__btn').click(function () {
+        $('.header__btn').toggleClass('active');
+    })
+
     // menu list btn
     $('.menu-down .menu-list__btn').click(function () {
         $(this).parent().toggleClass('active');
