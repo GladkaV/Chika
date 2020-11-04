@@ -21,12 +21,17 @@ $(function () {
 
     // header btn
     $('.header__btn').click(function () {
-        $('.header__btn').toggleClass('active');
+        $('.header__content-inner').toggleClass('active');
     })
 
     // menu list btn
+    $('.menu-list__item>.menu-list__btn').click(function () {
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    })
+
     $('.menu-down .menu-list__btn').click(function () {
-        $(this).parent().toggleClass('active');
+        $(this).parents('.menu-down__item').toggleClass('active');
         $(this).toggleClass('active');
         $(this).parent().next().slideToggle();
     })
@@ -40,8 +45,19 @@ $(function () {
             $(".header__content").removeClass(' header__content--fixed');
         }
     });
+
+
+
+
        
     
 
 
+
+
+    // form
+    $('form').on("submit", function (event) {
+        event.preventDefault();
+        console.log($(this).serialize());
+    });
 });
