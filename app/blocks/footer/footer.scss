@@ -10,22 +10,38 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    @media(max-width: 1130px) {
+        flex-wrap: wrap;
+        padding: 15px 0px 0;
+    }
 }
 .footer__top-img {
 
+    @media(max-width: 1130px) {
+        width: 30%;
+        margin: 0 15px 9px 0;
+    }
+    @media(max-width: 730px) {
+        margin-right: 5px;
+    }
+
+    img {
+        max-width: 100%;
+    }
 }
 .footer__btn {
     position: absolute;
     width: 44px;
     height: 44px;
     background-color: $red;
-    border: none;
     border-radius: 50%;
-    outline: none;
     right: 0;
     bottom: -38px;
     cursor: pointer;
     transition: all .3s;
+    padding-left: 11px;
+    padding-top: 14px;
 
     &:hover {
         transform: scale(1.15);
@@ -36,22 +52,67 @@
     background-color: $dark;
     color: #fff;
     padding: 43px 0 42px;
+
+    @media(max-width: 450px) {
+        padding: 33px 0 73px;
+    }
 }
 .footer__content-inner {
     display: flex;
     justify-content: space-between;
     padding-right: 3%;
+
+    @media(max-width: 1130px) {
+        flex-wrap: wrap;
+        padding-right: 0;
+        justify-content: center;
+    }
 }
 .footer__content-col {
   
+    @media(max-width: 1130px) {
+        width: 40%;
+        margin-right: 15px;
+    }
+    @media(max-width: 500px) {
+        margin-right: 0;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
 }
 .footer__col-form {
     max-width: 266px;
     width: 100%;
+    
+    @media(max-width: 1130px) {
+        max-width: 40%;
+    }
+    @media(max-width: 600px) {
+        max-width: 246px;
+    }
+    @media(max-width: 500px) {
+        margin-bottom: 40px;
+    }
+}
+.footer__col-list {
+    @media(max-width: 730px) {
+        width: 100%;
+        max-width: 420px;
+        padding-top: 20px;
+        margin-right: 0;
+    }
+    @media(max-width: 500px) {
+        text-align: left;
+    }
 }
 .footer__logo {
     display: inline-block;
     margin-bottom: 13px;
+
+    @media(max-width: 450px) {
+        margin-bottom: 8px;
+    }
 }
 .footer__copy {
     max-width: 212px;
@@ -60,10 +121,18 @@
     text-align: center;
     color: $dark_gray;
 
+    @media(max-width: 500px) {
+        margin: 0 auto;
+    }
+
     span {
         display: inline-block;
         max-width: 160px;
         margin-bottom: 15px;
+
+        @media(max-width: 450px) {
+            margin-bottom: 10px;
+        }
     }
 }
 .footer__list {
@@ -76,10 +145,34 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @media(max-width: 1130px) {
+        margin-bottom: 40px;
+    }
+    @media(max-width: 730px) {
+        max-width: 650px;
+        padding-top: 15px;
+    }
+    @media(max-width: 450px) {
+        padding-left: 20px;
+        margin-bottom: 27px;
+    }
+
     li {
         max-width: 158px;
         min-width: 94px;
         margin-bottom: 17px;
+
+        @media(max-width: 730px) {
+            width: 50%;
+
+            &:nth-child(even) {
+                max-width: 37%;
+            }
+        }
+        @media(max-width: 450px) {
+            margin-bottom: 9px;
+        }
+        
     }
 
     a {
@@ -90,6 +183,11 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #FFFFFF;
+
+        @media(max-width: 450px) {
+            font-size: 11px;
+            line-height: 15px;
+        }
     }
 }
 .footer__title {
@@ -104,11 +202,25 @@
     line-height: 16px;
     color: $dark_gray;
     max-width: 212px;
+
+    @media(max-width: 500px) {
+        margin: 0 auto;
+    }
+    @media(max-width: 450px) {
+        line-height: 19px;
+    }
 }
 .footer__form {
     width: 100%;
     position: relative;
     margin-top: 33px;
+
+    @media(max-width: 1130px) {
+        max-width: 266px;
+    }
+    @media(max-width: 500px) {
+        margin-top: 18px;
+    }
 
     input {
         width: 100%;
@@ -153,6 +265,11 @@
     line-height: 20px;
     margin-top: 17px;
     margin-bottom: 19px;
+
+    @media(max-width: 450px) {
+        margin-top: 9px;
+        margin-bottom: 12px;
+    }
 
     span {
         display: block;
