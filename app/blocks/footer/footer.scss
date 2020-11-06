@@ -1,0 +1,202 @@
+.footer {
+    font-family: 'Fira Sans', sans-serif;
+}
+.footer__top {
+    background: linear-gradient(0deg, #444444, #444444), #C4C4C4;
+}
+.footer__top-inner {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.footer__top-img {
+
+}
+.footer__btn {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-color: $red;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    right: 0;
+    bottom: -38px;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+// start footer content
+.footer__content {
+    background-color: $dark;
+    color: #fff;
+    padding: 43px 0 42px;
+}
+.footer__content-inner {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3%;
+}
+.footer__content-col {
+  
+}
+.footer__col-form {
+    max-width: 266px;
+    width: 100%;
+}
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 13px;
+}
+.footer__copy {
+    max-width: 212px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: $dark_gray;
+
+    span {
+        display: inline-block;
+        max-width: 160px;
+        margin-bottom: 15px;
+    }
+}
+.footer__list {
+    padding: 18px 0 0;
+    margin: 0;
+    list-style: none;
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+        max-width: 158px;
+        min-width: 94px;
+        margin-bottom: 17px;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+}
+.footer__title {
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 16px;
+    margin-bottom: 7px;
+    color: #FFFFFF;
+}
+.footer__text {
+    font-size: 13px;
+    line-height: 16px;
+    color: $dark_gray;
+    max-width: 212px;
+}
+.footer__form {
+    width: 100%;
+    position: relative;
+    margin-top: 33px;
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        line-height: 17px;
+        height: 27px;
+        color: #FFFFFF;
+        border-bottom: 2px solid #7E7E7E;
+        padding: 0 35px 0 0px;
+
+        &::placeholder {
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+        }
+    }
+
+    button {
+        position: absolute;
+        right: 0;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+.footer__phone {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    padding-top: 15px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.footer__address {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 17px;
+    margin-bottom: 19px;
+
+    span {
+        display: block;
+    }
+}
+.footer__social {
+    margin-bottom: 9px;
+
+    a {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #666;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+    a + a {
+        margin-left: 5px;
+    }
+}
+.footer__email {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 27px;
+    color: #FFFFFF;
+    position: relative;
+    padding-left: 35px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 19px;
+        background-image: url(../../img/footer/letter.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        top: 1px;
+    }
+}
+// end footer content

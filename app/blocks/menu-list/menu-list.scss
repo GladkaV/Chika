@@ -148,6 +148,7 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s;
+    z-index: 2;
 
     @media (max-width:1050px) {
         position: static;
