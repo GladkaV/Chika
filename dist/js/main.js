@@ -37,14 +37,14 @@ $(function () {
     })
 
     // scroll, fixed header
-    $(window).scroll(function () {
-        let top = $(document).scrollTop();
-        if (top > 0) {
-            $(".header__content").addClass(' header__content--fixed');
-        } else {
-            $(".header__content").removeClass(' header__content--fixed');
-        }
-    });
+    // $(window).scroll(function () {
+    //     let top = $(document).scrollTop();
+    //     if (top > 0) {
+    //         $(".header__content").addClass(' header__content--fixed');
+    //     } else {
+    //         $(".header__content").removeClass(' header__content--fixed');
+    //     }
+    // });
 
 
 
