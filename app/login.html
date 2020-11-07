@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chika</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="document">
+    <div class="wrapper">
+        <div class="content">
+            @@include("./blocks/header/_header.html")
+            <main class="main">
+                <div class="container">
+                    <ul class="bread-crumbs">
+                        <li><a href="#">
+                                <img src="img/bread-crumbs.png" alt="home">
+                            </a></li>
+                        <li><span>Вход</span></li>
+                    </ul>
+                    <h1 class="title">
+                        Вход
+                    </h1>
+                    <form class="login">
+                        <div class="login__email">
+                            <input class="login__input" type="email" name="login-email" id="login-email" required>
+                            <label class="login__placeholder" for="login-email">E-mail <span>*</span></label>
+                        </div>
+                        <div class="login__password">
+                            <input class="login__input" type="password" name="login-password" id="login-password" required>
+                            <label class="login__placeholder" for="login-password">Пароль <span>*</span></label>
+                            <label class="login__password-checkbox"><input type="checkbox"></label>
+                        </div>
+
+                        <label class="login__remember"><input type="checkbox"><span></span> Запомнить меня</label>
+                        <button class="login__forget-password">Забыли пароль?</button>
+
+                        <button class="login__log-up" type="submit">Войти</button>
+                        <a class="login__log-in" href="#">Регистрация</a>
+                    </form>
+                </div>
+            </main>
+        </div>
+
+        @@include("./blocks/footer/_footer.html")
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
