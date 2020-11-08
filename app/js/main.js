@@ -53,11 +53,11 @@ $(function () {
     });
 
     // page login (remember)
-    $('.login__remember input').click(function () {
+    $('.form__remember input').click(function () {
         if ($(this).is(':checked')) {
-            $('.login__remember').addClass('active');
+            $('.form__remember').addClass('active');
         } else {
-            $('.login__remember').removeClass('active');
+            $('.form__remember').removeClass('active');
         }
     })
 

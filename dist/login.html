@@ -2403,26 +2403,30 @@
                             </a></li>
                         <li><span>Вход</span></li>
                     </ul>
-                    <h1 class="title">
-                        Вход
-                    </h1>
-                    <form class="login form">
-                        <div class="login__email">
-                            <input class="form__input" type="email" name="login-email" id="login-email" required>
-                            <label class="form__placeholder" for="login-email">E-mail <span>*</span></label>
-                        </div>
-                        <div class="login__password">
-                            <input class="form__input" type="password" name="login-password" id="login-password" required>
-                            <label class="form__placeholder" for="login-password">Пароль <span>*</span></label>
-                            <label class="form__password-checkbox"><input type="checkbox"></label>
-                        </div>
+                    <section class="login">
+                        <h1 class="title">
+                            Вход
+                        </h1>
+                        <form class="form">
+                            <div class="form__wrap-input login__email">
+                                <input class="form__input" type="email" name="login-email" id="login-email" required>
+                                <label class="form__placeholder" for="login-email">E-mail <span>*</span></label>
+                            </div>
+                            <div class="form__wrap-input login__password">
+                                <input class="form__input" type="password" name="login-password" id="login-password"
+                                    required>
+                                <label class="form__placeholder" for="login-password">Пароль <span>*</span></label>
+                                <label class="form__password-checkbox"><input type="checkbox"></label>
+                            </div>
 
-                        <label class="login__remember"><input type="checkbox" name="remember-me"><span></span> Запомнить меня</label>
-                        <button class="login__forget-password">Забыли пароль?</button>
+                            <label class="form__remember login__remember"><input type="checkbox" name="remember-me"><span></span>
+                                Запомнить меня</label>
+                            <button class="login__forget-password">Забыли пароль?</button>
 
-                        <button class="form__log-in" type="submit">Войти</button>
-                        <a class="login__log-up" href="#">Регистрация</a>
-                    </form>
+                            <button class="form__log-in" type="submit">Войти</button>
+                            <a class="login__log-up" href="#">Регистрация</a>
+                        </form>
+                    </section>
                 </div>
             </main>
         </div>

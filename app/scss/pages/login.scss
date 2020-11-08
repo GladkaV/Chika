@@ -1,10 +1,19 @@
 .login {
     max-width: 328px;
-    padding-top: 45px;
     padding-bottom: 250px;
 
     @media(max-width: 480px) {
         padding-bottom: 130px;
+    }
+    .title {
+        margin-bottom: 45px;
+    }
+    .form__log-in {
+        margin-right: 50px;
+
+        @media(max-width: 480px) {
+            margin-right: 40px;
+        }
     }
 }
 .login__email {
@@ -22,48 +31,12 @@
         margin-bottom: 17px;
     }
 }
-.login__email,
-.login__password {
-    position: relative;
-
-    span {
-        // color: $red; ////////////////////////////////
-    }
-}
 .login__remember {
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.3px;
-    color: #A1A1A1;
-    cursor: pointer;
-    display: inline-block;
     margin-bottom: 32px;
     margin-right: 23px;
-
+    
     @media(max-width: 480px) {
         margin-bottom: 20px;
-    }
-
-    &.active {
-        span {
-            background-image: url(../../img/arrow.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            // background-color: $red; /////////////////////////////////
-            border-color: transparent;
-        }
-    }
-
-    input {
-        display: none;
-    }
-    span {
-        width: 16px;
-        height: 16px;
-        border-radius: 4px;
-        display: inline-block;
-        border: 1px solid #A1A1A1;
-        margin-bottom: -3px;
     }
 }
 .login__forget-password {
