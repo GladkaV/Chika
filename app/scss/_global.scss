@@ -100,3 +100,103 @@ body {
     font-weight: 400;
     line-height: 24px;
 }
+//////////////////////
+.form__input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #BEBEBE;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    height: 36px;
+}
+.form__input:focus + label{
+    font-size: 13px;
+    line-height: 16px;
+    color: #9F9F9F;
+    top: -11px;
+    left: 0px;
+}
+.form__placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    position: absolute;
+    left: 3px;
+    top: 8px;
+    transition: all .3s;
+
+    &.active {
+        font-size: 13px;
+        line-height: 16px;
+        color: #9F9F9F;
+        top: -11px;
+        left: 0px;
+    }
+}
+.form__password-checkbox {
+    display: inline-block;
+    right: 0;
+    width: 30px;
+    height: 23px;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    cursor: pointer;
+    background-image: url(../../img/login-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.active {
+        &::before {
+            content: "/";
+            position: absolute;
+            color: #BEBEBE;
+            left: 37%;
+            top: -.7px;
+            font-size: 22px;
+        }
+    }
+
+    input {
+        display: none;
+    }
+}
+.form__log-in {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    border: 2px solid #EB0002;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 12px 41.5px 10px;
+    margin-right: 50px;
+    outline: none;
+    cursor: pointer;
+
+    @media(max-width: 480px) {
+        margin-right:40px;
+        padding: 12px 39px 10px;
+    }
+}
+//////////////
+.phone-link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: $dark;
+    text-decoration: none;
+}
+.socials__link {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

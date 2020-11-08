@@ -62,18 +62,18 @@ $(function () {
     })
 
     // page login (password show)
-    $('.login__password-checkbox input').click(function () {
+    $('.form__password-checkbox input').click(function () {
         if ($(this).is(':checked')) {
-            $('.login__password .login__input').attr('type', 'text');
-            $('.login__password-checkbox').addClass('active');
+            $('.login__password .form__input').attr('type', 'text');
+            $('.form__password-checkbox').addClass('active');
         } else {
-            $('.login__password .login__input').attr('type', 'password');
-            $('.login__password-checkbox').removeClass('active');
+            $('.login__password .form__input').attr('type', 'password');
+            $('.form__password-checkbox').removeClass('active');
         }
     })
 
     // page login (label)
-    $('.login__input').blur(function() {
+    $('.form__input').blur(function() {
         let label = $(this).next();
 
         if ($(this).val() === '') {

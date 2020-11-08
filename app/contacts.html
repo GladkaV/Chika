@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chika</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="document">
+    <div class="wrapper">
+        <div class="content">
+            @@include("./blocks/header/_header.html")
+            <main class="main">
+                <div class="container">
+                    <ul class="bread-crumbs">
+                        <li><a href="#">
+                                <img src="img/bread-crumbs.png" alt="home">
+                            </a>
+                        </li>
+                        <li><span>Контакты</span></li>
+                    </ul>
+                    <h1 class="title">
+                        Контактная информация
+                    </h1>
+                    <section class="contacts">
+                        <div class="contacts__info">
+                            <div class="contacts__info-map">
+                                <span>город Одесса,</span>
+                                ул. Ришельевская 23, оф. 273
+                            </div>
+                            <div class="contacts__info-phone">
+                                <a class="phone-link" href="tel:+0964544550">(096) 454-45-50</a>
+                                многоканальный телефон:
+                            </div>
+                            <a class="contacts__info-email" href="mailto:info@chika.in.ua">info@chika.in.ua</a>
+                            <div class="socials">
+                                <a class="socials__link" href="#" style="background-image: url(img/viber.svg);"></a>
+                                <a class="socials__link" href="#" style="background-image: url(img/telegram.svg);"></a>
+                                <a class="socials__link" href="#" style="background-image: url(img/inst.svg);"></a>
+                                <a class="socials__link" href="#" style="background-image: url(img/WhatsApp.svg);"></a>
+                            </div>
+                        </div>
+                        <div class="contacts__wrap-form">
+                            <h4 class="contacts__title">
+                                НАПИШИТЕ НАМ СООБЩЕНИЕ
+                            </h4>
+                            <form class="contacts__form form">
+                                <div class="contacts__name">
+                                    <input class="form__input" type="text" name="contacts-name" id="contacts-name"
+                                        required>
+                                    <label class="form__placeholder" for="contacts-name">Ваше имя</label>
+                                </div>
+                                <div class="contacts__email">
+                                    <input class="form__input" type="email" name="contacts-email" id="contacts-email"
+                                        required>
+                                    <label class="form__placeholder" for="contacts-email">E-mail*</label>
+                                </div>
+                                <div class="contacts__message">
+                                    <textarea class="contacts__textarea" name="contacts-message"
+                                        id="contacts-message"></textarea>
+                                    <label class="form__placeholder" for="contacts-message">Сообщение</label>
+                                </div>
+                                <button class="form__log-in" type="submit">Отправить сообщение</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        @@include("./blocks/footer/_footer.html")
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
