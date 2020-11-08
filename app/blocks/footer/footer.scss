@@ -46,6 +46,10 @@
     &:hover {
         transform: scale(1.15);
     }
+    @media(max-width: 480px) {
+        bottom: auto;
+        top: -25px;
+    }
 }
 // start footer content
 .footer__content {

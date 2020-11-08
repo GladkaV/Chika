@@ -39,7 +39,7 @@ $(function () {
     // scroll, fixed header
     $(window).scroll(function () {
         let top = $(document).scrollTop();
-        if (top > 130) {
+        if (top > 60) {
             $(".header__content").addClass(' header__content--fixed');
         } else {
             $(".header__content").removeClass(' header__content--fixed');
