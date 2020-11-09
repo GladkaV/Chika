@@ -214,6 +214,7 @@ body {
     padding: 12px 41.5px 10px;
     outline: none;
     cursor: pointer;
+    transition: all .3s;
 
     @media(max-width: 480px) {
         padding: 12px 39px 10px;
@@ -239,4 +240,12 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+.mfp-bg {
+    background: rgba(0, 0, 0, 0.4);
+}
+.mfp-wrap {
+    .callback {
+        display: flex;
+    }
 }

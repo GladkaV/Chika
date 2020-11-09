@@ -133,9 +133,7 @@
                         <a class="socials__link" href="#" style="background-image: url(img/WhatsApp.svg);"></a>
                         <a class="socials__link" href="#" style="background-image: url(img/inst.svg);"></a>
                     </div>
-                    <button class="header__content-btn">
-                        ОБРАТНЫЙ ЗВОНОК
-                    </button>
+                    <a class="header__content-btn" href="#header-callback">ОБРАТНЫЙ ЗВОНОК</a>
                 </div>
 
                 <form class="header__content-search">
@@ -2392,6 +2390,30 @@
         </div>
     </div>
 </header>
+
+<!-- popup callback -->
+<div class="callback" id="header-callback">
+    <div class="callback__inner">
+        <button class="callback__close mfp-close" title="Close (Esc)" type="button"></button>
+        <h5 class="callback__title">
+            Обратный звонок
+        </h5>
+        <div class="callback__text">
+            Введите, пожалуйста, имя и ваш номер телефона, наш менеджер свяжется с вами в ближайшее время
+        </div>
+        <form class="form callback__form">
+            <div class="form__wrap-input callback__name">
+                <input class="form__input" type="text" name="callback-name" id="callback-name" required>
+                <label class="form__placeholder" for="callback-name">Ваше имя<span>*</span></label>
+            </div>
+            <div class="form__wrap-input callback__phone">
+                <input class="form__input" type="text" name="callback-phone" id="callback-phone" required>
+                <label class="form__placeholder" for="callback-phone">Номер телефона<span>*</span></label>
+            </div>
+            <button class="form__log-in" type="submit">Перезвонить мне</button>
+        </form>
+    </div>
+</div>
             <main class="main">
                 <div class="container">
                     <ul class="bread-crumbs">

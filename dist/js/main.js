@@ -7,6 +7,9 @@ $(function () {
         $('.header__lang-item').removeClass("active");
         $(this).parent().addClass("active");
     })
+    // header callback
+    $('.header__content-btn').magnificPopup({});
+    
     // header user
     $('.header__content-item.user').click(function () {
         $('.header__user-list').toggleClass('active');
@@ -50,6 +53,8 @@ $(function () {
     $('form').on("submit", function (event) {
         event.preventDefault();
         console.log($(this).serialize());
+
+        $.magnificPopup.close();
     });
 
     // page login (remember)
