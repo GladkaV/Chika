@@ -289,7 +289,8 @@ input[type=number]
 
 .quantity-button {
   position: absolute;
-  top: 24%;
+  top: 0;
+  padding-top: 7px;
   cursor: pointer;
   width: 25px;
   height: 35px;
