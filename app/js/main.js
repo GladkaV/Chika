@@ -9,7 +9,7 @@ $(function () {
     })
     // header callback
     $('.header__content-btn').magnificPopup({});
-    
+
     // header user
     $('.header__content-item.user').click(function () {
         $('.header__user-list').toggleClass('active');
@@ -40,21 +40,21 @@ $(function () {
     })
 
     // scroll, fixed header
-    $(window).scroll(function () {
-        let top = $(document).scrollTop();
-        if (top > 60) {
-            $(".header__content").addClass(' header__content--fixed');
-        } else {
-            $(".header__content").removeClass(' header__content--fixed');
-        }
-    });
+    // $(window).scroll(function () {
+    //     let top = $(document).scrollTop();
+    //     if (top > 60) {
+    //         $(".header__content").addClass(' header__content--fixed');
+    //     } else {
+    //         $(".header__content").removeClass(' header__content--fixed');
+    //     }
+    // });
 
     // form
     $('form').on("submit", function (event) {
         event.preventDefault();
         console.log($(this).serialize());
 
-        $.magnificPopup.close();
+        // $.magnificPopup.close();
     });
 
     // page login (remember)
@@ -78,7 +78,7 @@ $(function () {
     })
 
     // page login (label)
-    $('.form__input').blur(function() {
+    $('.form__input').blur(function () {
         let label = $(this).next();
 
         if ($(this).val() === '') {
@@ -87,4 +87,93 @@ $(function () {
             $(label).addClass('active');
         }
     })
+
+    // page cart (style input)
+    $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">–</div></div>').insertAfter('.quantity input');
+    $('.quantity').each(function () {
+        let spinner = jQuery(this),
+            input = spinner.find('input[type="number"]'),
+            btnUp = spinner.find('.quantity-up'),
+            btnDown = spinner.find('.quantity-down'),
+            min = input.attr('min'),
+            max = input.attr('max');
+
+        btnUp.click(function () {
+            let oldValue = parseFloat(input.val());
+            if (oldValue >= max) {
+                var newVal = oldValue;
+            } else {
+                var newVal = oldValue + 1;
+            }
+            spinner.find("input").val(newVal);
+            spinner.find("input").trigger("change");
+        });
+
+        btnDown.click(function () {
+            let oldValue = parseFloat(input.val());
+            if (oldValue <= min) {
+                var newVal = oldValue;
+            } else {
+                var newVal = oldValue - 1;
+            }
+            spinner.find("input").val(newVal);
+            spinner.find("input").trigger("change");
+        });
+
+    });
+
+    // page cart (item sum)
+    $('.quantity-button').click(function () {
+        let cartItem = $(this).parents('.cart__item'),
+            quantity = $(cartItem).find('.cart__item-input').val(),
+            price = $(cartItem).find('.cart__item-input').data('price'),
+
+            sum = quantity * price,
+
+            integer = Math.trunc(sum),
+            fraction = Math.trunc((sum - Math.trunc(sum)) * 100);
+
+        $(cartItem).find('.cart__item-sum').text(integer + '.');
+        if (fraction === 0) {
+            $(cartItem).find('.cart__num-js .cart__item-penny').text('0' + fraction);
+        } else {
+            $(cartItem).find('.cart__num-js .cart__item-penny').text(fraction);
+        }
+
+        cartSum();
+    })
+
+    // page cart (btn remove item)
+    $('.cart__item-btn').click(function () {
+        $(this).parents('.cart__item').remove();
+
+        cartSum();
+    })
+
+    // function total sum
+    function cartSum() {
+        let products = $('.cart__item-input'),
+            totalSum = 0,
+            totalPenny, productSum;
+
+        if (products.length === 0) {
+            $('.cart__total-num').text('0.');
+            $('.cart__total-penny').text('00');
+        } else {
+            products.each(function () {
+                productSum = +($(this).val() * +$(this).data('price')).toFixed(2);
+                totalSum += productSum;
+            })
+        }
+
+        totalPenny = Math.trunc((totalSum - Math.trunc(totalSum)) * 100);
+
+        $('.cart__total-num').text(Math.trunc(totalSum) + '.');
+        if (totalPenny === 0) {
+            $('.cart__total-penny').text('0' + totalPenny);
+        } else {
+            $('.cart__total-penny').text(totalPenny);
+        }
+    }
+    cartSum();
 });

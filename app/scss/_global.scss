@@ -249,3 +249,62 @@ body {
         display: flex;
     }
 }
+
+.quantity {
+  position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  text-align: center;
+  width: 52px;
+  height: 35px;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  border: none;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  position: absolute;
+  top: 0;
+  height: 35px;
+  width: 92px;
+}
+
+.quantity-button {
+  position: absolute;
+  top: 24%;
+  cursor: pointer;
+  width: 25px;
+  height: 35px;
+  text-align: center;
+  user-select: none;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: #BEBEBE;
+}
+
+.quantity-button.quantity-up {
+  right: 6px;
+}
+
+.quantity-button.quantity-down {
+  left: 6px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chika</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="document">
+    <div class="wrapper">
+        <div class="content">
+            @@include("./blocks/header/_header.html")
+            <main class="main">
+                <div class="container">
+                    <ul class="bread-crumbs">
+                        <li><a href="#">
+                                <img src="img/bread-crumbs.png" alt="home">
+                            </a>
+                        </li>
+                        <li><span>Корзина</span></li>
+                    </ul>
+                    <section class="cart">
+                        <h1 class="title">
+                            Корзина
+                        </h1>
+                        <div class="cart__inner">
+                            <div class="cart__info">
+                                <div class="cart__info-product">Товар</div>
+                                <div class="cart__info-quantity">Количество (шт.)</div>
+                                <div class="cart__info-price">Цена</div>
+                                <div class="cart__info-total">Итого</div>
+                            </div>
+                            <div class="cart__item">
+                                <div class="cart__item-img">
+                                    <img src="img/cart/item-1.png" alt="perfume">
+                                </div>
+                                <div class="cart__item-text">
+                                    Набор миниатюр для глубокого увлажнения кожи лица: крем-гель, эссенция и крем
+                                    Dr.Jart+ Vital Hydra Kit 15ml
+                                </div>
+                                <div class="cart__item-quantity quantity">
+                                    <input class="cart__item-input" type="number" min="1" step="1" value="1" data-price="200.30" readonly>
+                                </div>
+                                <div class="cart__num">
+                                    <span class="cart__item-price">200.</span>
+                                    <span class="cart__item-penny">30</span>
+                                    грн
+                                </div>
+                                <div class="cart__num cart__num-js">
+                                    <span class="cart__item-sum">200.</span>
+                                    <span class="cart__item-penny">30</span>
+                                    грн
+                                </div>
+                                <button class="cart__item-btn"></button>
+                            </div>
+                            <div class="cart__item">
+                                <div class="cart__item-img">
+                                    <img src="img/cart/item-2.png" alt="perfume">
+                                </div>
+                                <div class="cart__item-text">
+                                    антибактериальный спрей для рук "sweet mint"
+                                </div>
+                                <div class="cart__item-quantity quantity">
+                                    <input class="cart__item-input" type="number" min="1" step="1" value="1" data-price="50.00" readonly>
+                                </div>
+                                <div class="cart__num">
+                                    <span class="cart__item-price">50.</span>
+                                    <span class="cart__item-penny">00</span>
+                                    грн
+                                </div>
+                                <div class="cart__num cart__num-js">
+                                    <span class="cart__item-sum">50.</span>
+                                    <span class="cart__item-penny">00</span>
+                                    грн
+                                </div>
+                                <button class="cart__item-btn"></button>
+                            </div>
+                            <div class="cart__item">
+                                <div class="cart__item-img">
+                                    <img src="img/cart/item-3.png" alt="perfume">
+                                </div>
+                                <div class="cart__item-text">
+                                    Набор миниатюр для глубокого увлажнения кожи лица: крем-гель, эссенция и крем
+                                    Dr.Jart+ Vital Hydra Kit 15ml
+                                </div>
+                                <div class="cart__item-quantity quantity">
+                                    <input class="cart__item-input" type="number" min="1" step="1" value="1" data-price="200.30" readonly>
+                                </div>
+                                <div class="cart__num">
+                                    <span class="cart__item-price">200.</span>
+                                    <span class="cart__item-penny">30</span>
+                                    грн
+                                </div>
+                                <div class="cart__num cart__num-js">
+                                    <span class="cart__item-sum">200.</span>
+                                    <span class="cart__item-penny">30</span>
+                                    грн
+                                </div>
+                                <button class="cart__item-btn"></button>
+                            </div>
+                            <div class="cart__item">
+                                <div class="cart__item-img">
+                                    <img src="img/cart/item-4.png" alt="perfume">
+                                </div>
+                                <div class="cart__item-text">
+                                    антибактериальный спрей для рук "sweet mint"
+                                </div>
+                                <div class="cart__item-quantity quantity">
+                                    <input class="cart__item-input" type="number" min="1" step="1" value="1" data-price="50.00" readonly>
+                                </div>
+                                <div class="cart__num">
+                                    <span class="cart__item-price">50.</span>
+                                    <span class="cart__item-penny">00</span>
+                                    грн
+                                </div>
+                                <div class="cart__num cart__num-js">
+                                    <span class="cart__item-sum">50.</span>
+                                    <span class="cart__item-penny">00</span>
+                                    грн
+                                </div>
+                                <button class="cart__item-btn"></button>
+                            </div>
+                            <div class="cart__total">
+                                Общая стоимость заказа:
+                                <div class="cart__total-sum">
+                                    <span class="cart__total-num">0.</span>
+                                    <span class="cart__total-penny">00</span>
+                                    <span class="cart__total-currency">грн</span>
+                                </div>
+                            </div>
+                            <a class="cart__checkout" href="#">Оформить заказ</a>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        @@include("./blocks/footer/_footer.html")
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
