@@ -176,4 +176,28 @@ $(function () {
         }
     }
     cartSum();
+
+    // page blog (load more)
+    let blogsitems = $('.blogs__wrap-item');
+    $('.blogs__btn').click(function () {
+        let delta = 180;
+        $(this).find('span').css('transform', `rotate(${delta}deg)`);
+
+        setTimeout(() => {
+            blogsitems.each(function (index, element) {
+                $(element).show();
+            })
+
+            $(this).hide();
+        }, 300);
+    })
+
+    // page blog (max-width:450px show blogs items)
+    if ($(window).width() <= '450') {
+        blogsitems.each(function (index, element) {
+            if (index > 5) {
+                $(element).hide();
+            }
+        })
+    }
 });
