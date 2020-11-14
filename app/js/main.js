@@ -200,4 +200,14 @@ $(function () {
             }
         })
     }
+
+    // page wish-list (remove item)
+    $('.product__remove').click(function () {
+        $(this).parents('.favorites__item').remove();
+    })
+
+    // page wish-list (dislike item)
+    $('.product__favorites').click(function () {
+        $(this).toggleClass('product__favorites--dislike');
+    })
 });

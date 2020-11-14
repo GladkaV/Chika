@@ -29,7 +29,7 @@
     display: inline-block;
     max-width: 433px;
     text-decoration: none;
-    color: $dark;
+    // color: $dark;
     margin: 0 10px;
 }
 .blogs__img {
@@ -185,7 +185,7 @@
 
         &.active {
             width: 48px;
-            background-color: $red;
+            // background-color: $red;
 
             a,
             span {
@@ -211,7 +211,7 @@
         transition: color .2s;
 
         &:hover {
-            color: $red;
+            // color: $red;
         }
     }
 }
@@ -234,7 +234,7 @@
         fill: #505759;
         transition: all .2s;
         &:hover {
-            fill: $red
+            // fill: $red
         }
     }
 }
