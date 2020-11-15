@@ -104,12 +104,12 @@
     }
 }
 .product--new {
-    border: 1px solid $green;
-    color: $green;
+    // border: 1px solid $green;
+    // color: $green;
 }
 .product--bestseller {
-    color: $pink;
-    border: 1px solid $pink;
+    // color: $pink;
+    // border: 1px solid $pink;
 }
 .product__remove {
     background-color: transparent;
@@ -141,7 +141,7 @@
         position: absolute;
         width: 26px;
         height: 3px;
-        background-color: $dark;
+        // background-color: $dark;
 
         @media(max-width: 450px) {
             width: 20px;
@@ -188,7 +188,7 @@
     font-size: 15px;
     line-height: 20px;
     display: inline-block;
-    color: $dark;
+    // color: $dark;
     text-align: center;
     text-transform: uppercase;
     max-width: 258px;
@@ -269,7 +269,7 @@
     bottom: -34px;
     left: 50%;
     transform: translateX(-50%);
-    background: $red;
+    // background: $red;
     border-radius: 5px;
     font-weight: bold;
     font-size: 16px;

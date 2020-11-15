@@ -210,4 +210,12 @@ $(function () {
     $('.product__favorites').click(function () {
         $(this).toggleClass('product__favorites--dislike');
     })
+
+    // page reviews (rateYo)
+    $(".reviews__star").rateYo({
+        readOnly: true,
+        starWidth: "16px",
+        fullStar: true,
+        spacing: "3px"
+    });
 });
