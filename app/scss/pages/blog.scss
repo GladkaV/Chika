@@ -132,40 +132,6 @@
         line-height: 20px;
     }
 }
-.blogs__btn {
-    margin: 32px 0 44px;
-    display: none;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #505759;
-    outline: none;
-    border: none;
-    background: #F9F9F9;
-    border-radius: 10px;
-    width: 100%;
-    padding: 23px 10px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    @media(max-width: 450px) {
-        display: flex;
-    }
-
-    span {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background-image: url(../../img/load-more.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        margin: 0 28px 0 0;
-        transition: all .3s;
-
-    }
-}
 // start list pages
 .pages {
     margin: 0 auto;

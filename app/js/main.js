@@ -54,7 +54,16 @@ $(function () {
         event.preventDefault();
         console.log($(this).serialize());
 
-        // $.magnificPopup.close();
+        $.magnificPopup.close();
+
+        // page reviews (popup)
+        if ($(this).hasClass('reviews__form')) {
+            let name = $(this).find('.form__input').val(),
+                message = $(this).find('.form__textarea').val(),
+                star = $(this).find('.reviews__star').rateYo("option", "rating");
+            // let date = new Date().getDate() + `.` + (new Date().getMonth() + 1) + `.` + new Date().getFullYear();
+ 
+        }
     });
 
     // page login (remember)
@@ -179,7 +188,7 @@ $(function () {
 
     // page blog (load more)
     let blogsitems = $('.blogs__wrap-item');
-    $('.blogs__btn').click(function () {
+    $('.load-more').click(function () {
         let delta = 180;
         $(this).find('span').css('transform', `rotate(${delta}deg)`);
 
@@ -212,10 +221,19 @@ $(function () {
     })
 
     // page reviews (rateYo)
-    $(".reviews__star").rateYo({
+    $(".reviews__item-star").rateYo({
         readOnly: true,
         starWidth: "16px",
         fullStar: true,
         spacing: "3px"
     });
+
+    // page reviews (popup)
+    $('.reviews__btn').magnificPopup({});
+    // $(".reviews__star").rateYo({
+    //     rating: 5,
+    //     starWidth: "26px",
+    //     fullStar: true,
+    //     spacing: "4.2px"
+    // });
 });

@@ -2,34 +2,58 @@
     text-align: center;
     padding-bottom: 95px;
 
+    @media(max-width: 450px) {
+       padding-bottom: 132px;
+    }
+
     .title {
         text-align: left;
     }
 }
-.feedback {
+.reviews__btn,
+.reviews__form-btn {
     text-decoration: none;
     display: inline-block;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    color: $dark;
+    // color: $dark;
     padding: 11px 24px;
-    border: 2px solid $red;
+    // border: 2px solid $red;
     border-radius: 5px;
+}  
+.reviews__btn {
     margin: 46px 0 63px;
-}
+
+    @media(max-width: 450px) {
+        margin: 26px 0 36px;
+    }
+}  
 .reviews__inner {
     text-align: left;
     max-width: 1114px;
     margin: 0 auto 123px;
+
+    @media(max-width: 450px) {
+       margin-bottom: 50px;
+    }
 }
 .reviews__item {
     padding: 8px 0 17px;
     margin-bottom: 15px;
+
+    @media(max-width: 450px) {
+        padding-top: 0;
+        margin-bottom: 5px;
+    }
 }
 .reviews__item--border {
     border-bottom: 1px solid #bebebe;
     margin-bottom: 23px;
+
+    @media(max-width: 450px) {
+       margin-bottom: 17px;
+    }
 }
 .rewiews__comment {
     display: flex;
@@ -39,24 +63,49 @@
     width: 100%;
     max-width: 170px;
     margin-right: 15px;
+    flex-shrink: 1;
+
+    @media(max-width: 650px) {
+        max-width: 95px;
+    }
+    @media(max-width: 450px) {
+        max-width: 85px;
+    }
 }
-.reviews__star.jq-ry-container {
+.reviews__item-star.jq-ry-container {
     padding: 0;
     margin-bottom: 16px;
     z-index: 3;
+
+    @media(max-width: 450px) {
+        transform: scale(.8);
+        margin: -2px 0 9px -9px;
+    }
 }
 .reviews__name {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 5px;
+
+    @media(max-width: 450px) {
+        font-size: 13px;
+        line-height: 16px;
+        margin-bottom: 7px;
+    }
 }
 .reviews__data {
-    color: $dark_gray;
+    // color: $dark_gray;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
     margin-bottom: 8px;
+
+    @media(max-width: 650px) {
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 12px;
+    }
 }
 .reviews__social {
 
@@ -70,6 +119,13 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
+    flex-shrink: 2;
+
+    @media(max-width: 650px) {
+        padding-top: 2px;
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 .reviews__answer {
     display: flex;
@@ -77,9 +133,83 @@
     max-width: 1049px;
     margin: 24px 0 0px auto;
     border: 1px solid #BEBEBE;
+
+    @media(max-width: 450px) {
+        padding: 18px 19px 6px;
+        .reviews__info {
+            max-width: 65px;
+        }
+    }
 }
+// START POPUP
+.reviews__wrap-form {
+    display: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    padding: 43px 75px 39px 71px;
+    max-width: 846px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    .mfp-close {
+        font-size: 0;
+        top: 35px;
+        right: 60px;
+        opacity: 1;
 
 
-.reviews__item:has(.reviews__answer) { 
-    background-color: red;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            // background-color: $red;
+            left: 20%;
+            top: 45%;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+    .form__wrap-input {
+        width: 47%;
+        margin-bottom: 81px;
+    }
 }
+.reviews__form-stars {
+    display: flex;
+    margin-bottom: 26px;
+
+    label {
+        margin-right: 15px;
+        padding-top: 5px;
+    }
+}
+.form__wrap-input.reviews__textarea {
+    width: 100%;
+    margin-bottom: 0;
+    .form__placeholder {
+        margin-top: -45px;
+    }
+    .form__textarea {
+        width: 100%;
+        min-height: 176px;
+    }
+}
+.reviews__form-btn {
+    margin: 44px 0 0;
+    padding: 11px 35px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+// END POPUP

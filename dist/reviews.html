@@ -2430,12 +2430,12 @@
                         <h1 class="title">
                             Отзывы
                         </h1>
-                        <a class="feedback" href="#">Оставить отзыв</a>
+                        <a class="reviews__btn" href="#reviews-form">Оставить отзыв</a>
                         <div class="reviews__inner">
                             <div class="reviews__item reviews__item--border">
                                 <div class="rewiews__comment">
                                     <div class="reviews__info">
-                                        <div class="reviews__star" data-rateyo-rating="5"></div>
+                                        <div class="reviews__item-star" data-rateyo-rating="5"></div>
                                         <div class="reviews__name">
                                             Жасмин
                                         </div>
@@ -2467,7 +2467,7 @@
                             <div class="reviews__item">
                                 <div class="rewiews__comment">
                                     <div class="reviews__info">
-                                        <div class="reviews__star" data-rateyo-rating="4"></div>
+                                        <div class="reviews__item-star" data-rateyo-rating="4"></div>
                                         <div class="reviews__name">
                                             Светлана Дронова
                                         </div>
@@ -2511,7 +2511,7 @@
                             <div class="reviews__item reviews__item--border">
                                 <div class="rewiews__comment">
                                     <div class="reviews__info">
-                                        <div class="reviews__star" data-rateyo-rating="3"></div>
+                                        <div class="reviews__item-star" data-rateyo-rating="3"></div>
                                         <div class="reviews__name">
                                             Жасмин
                                         </div>
@@ -2543,7 +2543,7 @@
                             <div class="reviews__item">
                                 <div class="rewiews__comment">
                                     <div class="reviews__info">
-                                        <div class="reviews__star" data-rateyo-rating="2"></div>
+                                        <div class="reviews__item-star" data-rateyo-rating="2"></div>
                                         <div class="reviews__name">
                                             Екатерина
                                         </div>
@@ -2585,6 +2585,9 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="load-more">
+                            <span></span>Загрузить еще
+                        </button>
                         <ul class="pages">
                             <li class="pages__prev">
                                 <a href="#">
@@ -2630,6 +2633,24 @@
                     </section>
                 </div>
             </main>
+
+            <div class="reviews__wrap-form" id="reviews-form">
+                <form class="reviews__form">
+                    <div class="reviews__form-stars">
+                        <label>Оцените наш магазин</label>
+                        <!-- <div class="reviews__star"></div> -->
+                    </div>
+                    <div class="form__wrap-input ">
+                        <input class="form__input" type="text" name="reviews-name" id="reviews-name">
+                        <label class="form__placeholder" for="reviews-name">Ваше имя</label>
+                    </div>
+                    <div class="form__wrap-input reviews__textarea">
+                        <textarea class="form__textarea" name="reviews-message" id="reviews-message"></textarea>
+                        <label class="form__placeholder" for="reviews-message">Сообщение</label>
+                    </div>
+                    <button class="reviews__form-btn" type="submit">Оставить отзыв</button>
+                </form>
+            </div>
         </div>
 
         <footer class="footer">
@@ -2755,8 +2776,6 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
