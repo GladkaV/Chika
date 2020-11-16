@@ -237,19 +237,59 @@
                 <form class="reviews__form">
                     <div class="reviews__form-stars">
                         <label>Оцените наш магазин</label>
-                        <!-- <div class="reviews__star"></div> -->
+                        <div class="reviews__star">
+                            <div class="rating-area">
+                                <input type="radio" id="star-5" name="rating" value="5" checked>
+                                <label for="star-5" title="Оценка «5»"></label>
+                                <input type="radio" id="star-4" name="rating" value="4">
+                                <label for="star-4" title="Оценка «4»"></label>
+                                <input type="radio" id="star-3" name="rating" value="3">
+                                <label for="star-3" title="Оценка «3»"></label>
+                                <input type="radio" id="star-2" name="rating" value="2">
+                                <label for="star-2" title="Оценка «2»"></label>
+                                <input type="radio" id="star-1" name="rating" value="1">
+                                <label for="star-1" title="Оценка «1»"></label>
+                            </div>
+                        </div>
                     </div>
                     <div class="form__wrap-input ">
-                        <input class="form__input" type="text" name="reviews-name" id="reviews-name">
+                        <input class="form__input" type="text" name="reviews-name" id="reviews-name" required>
                         <label class="form__placeholder" for="reviews-name">Ваше имя</label>
                     </div>
                     <div class="form__wrap-input reviews__textarea">
-                        <textarea class="form__textarea" name="reviews-message" id="reviews-message"></textarea>
+                        <textarea class="form__textarea" name="reviews-message" id="reviews-message" required></textarea>
                         <label class="form__placeholder" for="reviews-message">Сообщение</label>
                     </div>
                     <button class="reviews__form-btn" type="submit">Оставить отзыв</button>
                 </form>
             </div>
+            <!-- template reviews item -->
+            <template id="reviewsItemTemplate"">
+                <div class="reviews__item reviews__item--border">
+                    <div class="rewiews__comment">
+                        <div class="reviews__info">
+                            <div class="reviews__item-star" data-rateyo-rating="${rating}"></div>
+                            <div class="reviews__name">
+                                ${name}
+                            </div>
+                            <div class="reviews__data">
+                                ${date}
+                            </div>
+                            <div class="reviews__social">
+                                <a href="#">
+                                    <img src="img/reviews-fb.svg" alt="fb">
+                                </a>
+                                <a href="#">
+                                    <img src="img/reviews-inst.svg" alt="inst">
+                                </a>
+                            </div>
+                        </div>
+                        <p class="reviews__text">
+                            ${message}
+                        </p>
+                    </div>
+                </div>
+            </template>
         </div>
 
         @@include("./blocks/footer/_footer.html")
@@ -257,6 +297,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 

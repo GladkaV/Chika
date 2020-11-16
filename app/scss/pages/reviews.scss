@@ -115,6 +115,7 @@
     }
 }
 .reviews__text {
+    flex-grow: 1;
     margin: 0;
     font-weight: 400;
     font-size: 15px;
@@ -149,7 +150,7 @@
     line-height: 20px;
     letter-spacing: 0.3px;
     text-align: center;
-    padding: 43px 75px 39px 71px;
+    padding: 38px 75px 39px 71px;
     max-width: 846px;
     background-color: #fff;
     margin: 0 auto;
@@ -187,11 +188,11 @@
 }
 .reviews__form-stars {
     display: flex;
-    margin-bottom: 26px;
+    margin-bottom: 22px;
 
-    label {
+    &>label {
         margin-right: 15px;
-        padding-top: 5px;
+        padding-top: 10px;
     }
 }
 .form__wrap-input.reviews__textarea {
@@ -212,4 +213,44 @@
     background-color: transparent;
     cursor: pointer;
 }
+// start raiting star
+.rating-area {
+    overflow: hidden;
+    margin-left: 2px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	padding: 0;
+	cursor: pointer;
+	font-size: 35px;
+	line-height: 1;
+    color: lightgrey;
+    margin-right: 0;
+}
+
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+}
+.rate-area > label:active {
+	position: relative;
+}
+// end raiting star
 // END POPUP

@@ -58,11 +58,25 @@ $(function () {
 
         // page reviews (popup)
         if ($(this).hasClass('reviews__form')) {
-            let name = $(this).find('.form__input').val(),
-                message = $(this).find('.form__textarea').val(),
-                star = $(this).find('.reviews__star').rateYo("option", "rating");
-            // let date = new Date().getDate() + `.` + (new Date().getMonth() + 1) + `.` + new Date().getFullYear();
- 
+            let dateDay = new Date().getDate(),
+                dateMonth = new Date().getMonth() + 1,
+                dateYear = new Date().getFullYear();
+            if (dateDay < 10) {
+                dateDay = '0' + dateDay;
+            } 
+            if (dateMonth < 10) {
+                dateDay = '0' + dateMonth;
+            } 
+
+            let itemInfo = [{
+                name: $(this).find('.form__input').val(),
+                message: $(this).find('.form__textarea').val(),
+                rating: +$(this).find('.rating-area input:checked').val(),
+                date: dateDay + '.' + dateMonth + '.' + dateYear,
+            }]
+
+            $("#reviewsItemTemplate").tmpl(itemInfo).appendTo(".reviews__inner");
+            initializationRateYo($(".reviews__item-star"));
         }
     });
 
@@ -221,19 +235,17 @@ $(function () {
     })
 
     // page reviews (rateYo)
-    $(".reviews__item-star").rateYo({
-        readOnly: true,
-        starWidth: "16px",
-        fullStar: true,
-        spacing: "3px"
-    });
+    function initializationRateYo(element) {
+        element.rateYo({
+            readOnly: true,
+            starWidth: "16px",
+            fullStar: true,
+            spacing: "3px"
+        });
+    }
+
+    initializationRateYo($(".reviews__item-star"));
 
     // page reviews (popup)
     $('.reviews__btn').magnificPopup({});
-    // $(".reviews__star").rateYo({
-    //     rating: 5,
-    //     starWidth: "26px",
-    //     fullStar: true,
-    //     spacing: "4.2px"
-    // });
 });
