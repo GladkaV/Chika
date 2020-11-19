@@ -79,8 +79,18 @@
 }
 .brands__item-inner {
     max-width: 207px;
-    // color: $dark;
+    color: $dark;
     text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        color: $red;
+
+        .brands__img {
+            border-color: transparent;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.14);
+        }
+    }
 }
 .brands__img {
     display: flex;
@@ -89,6 +99,7 @@
     min-height: 136px;
     border: 1px solid #BEBEBE;
     margin-bottom: 9px;
+    transition: all .3s;
 
     @media(max-width: 500px) {
         min-height: 100px;

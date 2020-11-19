@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chika</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="document">
+    <div class="wrapper">
+        <div class="content">
+            @@include("./blocks/header/_header.html")
+            <main class="main">
+                <div class="container">
+                    <ul class="bread-crumbs">
+                        <li><a href="#">
+                                <img src="img/bread-crumbs.png" alt="home">
+                            </a></li>
+                        <li><span>Регистрация</span></li>
+                    </ul>
+                    <section class="recover">
+                        <h1 class="title">
+                            Регистрация
+                        </h1>
+                        <p class="recover__text">
+                            Укажите e-mail, который вы использовали при регистрации. На него мы вышлем инструкцию для
+                            восстановления пароля.
+                        </p>
+                        <form>
+                            <div class="form__wrap-input">
+                                <input class="form__input" type="email" name="recover-email" id="recover-email" required>
+                                <label class="form__placeholder" for="recover-email">E-mail <span>*</span></label>
+                            </div>
+                            <button class="recover__btn" type="submit">Восстановить пароль</button>
+                        </form>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        @@include("./blocks/footer/_footer.html")
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
