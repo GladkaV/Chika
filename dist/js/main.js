@@ -51,6 +51,19 @@ $(function () {
 
     // form
     $('form').on("submit", function (event) {
+        // page registration (mask phone)
+        if ($(this).hasClass('registration__form')) {
+            let password = $(this).find('#registration-password'),
+                passwordRepeat = $(this).find('#registration-password-repeat');
+
+            if (password.val() !== passwordRepeat.val()) {
+                passwordRepeat.next().addClass('valid');
+                setTimeout(() => {
+                    passwordRepeat.next().removeClass('valid');
+                }, 2000);
+            }
+        }
+
         event.preventDefault();
         console.log($(this).serialize());
 
@@ -81,22 +94,22 @@ $(function () {
     });
 
     // page login (remember)
-    $('.form__remember input').click(function () {
+    $('.form__checkbox input').click(function () {
         if ($(this).is(':checked')) {
-            $('.form__remember').addClass('active');
+            $(this).parents('.form__checkbox').addClass('active');
         } else {
-            $('.form__remember').removeClass('active');
+            $(this).parents('.form__checkbox').removeClass('active');
         }
     })
 
     // page login (password show)
     $('.form__password-checkbox input').click(function () {
         if ($(this).is(':checked')) {
-            $('.login__password .form__input').attr('type', 'text');
-            $('.form__password-checkbox').addClass('active');
+            $(this).parents('.form__wrap-input').children('.form__input').attr('type', 'text');
+            $(this).parents('.form__password-checkbox').addClass('active');
         } else {
-            $('.login__password .form__input').attr('type', 'password');
-            $('.form__password-checkbox').removeClass('active');
+            $(this).parents('.form__wrap-input').children('.form__input').attr('type', 'password');
+            $(this).parents('.form__password-checkbox').removeClass('active');
         }
     })
 
@@ -254,6 +267,11 @@ $(function () {
         $(this).children().removeClass('active');
         $(event.target).addClass('active');
     })
+
+    // page registration (mask phone)
+    $('#registration-phone').mask("+38(999) 999 99 99");
+
+    
 
 
 

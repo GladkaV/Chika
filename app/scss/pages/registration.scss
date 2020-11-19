@@ -1,0 +1,45 @@
+.registration {
+    padding-bottom: 150px;
+    
+    .form__wrap-input {
+        margin-bottom: 34px;
+    }
+    .form__checkbox {
+        display: block;
+        margin-bottom: 10px;
+        // color: $dark;
+
+        a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+    }
+}
+.registration__text {
+    padding-top: 13px;
+    margin: 0 0 31px;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+
+    span {
+        // color: $red;
+        font-weight: 700;
+    }
+}
+.registration__form-inner {
+    max-width: 328px;
+    margin-bottom: 40px;
+}
+.registration__btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    border: 2px solid #EB0002;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    margin-top: 24px;
+    padding: 11px 36px;
+}

@@ -2423,30 +2423,77 @@
                         <li><a href="#">
                                 <img src="img/bread-crumbs.png" alt="home">
                             </a></li>
-                        <li><span>Вход</span></li>
+                        <li><span>Регистрация</span></li>
                     </ul>
-                    <section class="login">
+                    <section class="registration">
                         <h1 class="title">
-                            Вход
+                            Регистрация
                         </h1>
-                        <form class="form">
-                            <div class="form__wrap-input login__email">
-                                <input class="form__input" type="email" name="login-email" id="login-email" required>
-                                <label class="form__placeholder" for="login-email">E-mail <span>*</span></label>
+                        <p class="registration__text">
+                            Зарегистрируйтесь, заполнив <strong>ВСЕ поля</strong> и получите <span>ПОДАРОК</span> с
+                            первым заказом
+                        </p>
+                        <form class="registration__form">
+                            <div class="registration__form-inner">
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="text" name="registration-first-name"
+                                        id="registration-first-name" required>
+                                    <label class="form__placeholder" for="registration-first-name">Ваше имя</label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="text" name="registration-last-name"
+                                        id="registration-last-name" required>
+                                    <label class="form__placeholder" for="registration-last-name">Ваша фамилия</label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="email" name="registration-email"
+                                        id="registration-email" required>
+                                    <label class="form__placeholder" for="registration-email">E-mail
+                                        <span>*</span></label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="text" name="registration-phone"
+                                        id="registration-phone" required>
+                                    <label class="form__placeholder" for="registration-phone">Номер телефона</label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="text" name="registration-city"
+                                        id="registration-city" required>
+                                    <label class="form__placeholder" for="registration-city">Ваш город</label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input datepicker-here" type='text' name="registration-birth"
+                                        id="registration-birth" required readonly />
+                                    <label class="form__placeholder" for="registration-birth">Дата рождения</label>
+                                    <span class="form__registration-birth"></span>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="password" name="registration-password"
+                                        id="registration-password" required>
+                                    <label class="form__placeholder" for="registration-password">Пароль
+                                        <span>*</span></label>
+                                    <label class="form__password-checkbox"><input type="checkbox"></label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="password" name="registration-password-repeat"
+                                        id="registration-password-repeat" required>
+                                    <label class="form__placeholder" for="registration-password-repeat">Повторите пароль
+                                        <span>*</span></label>
+                                    <label class="form__password-checkbox"><input type="checkbox"></label>
+                                </div>
                             </div>
-                            <div class="form__wrap-input login__password">
-                                <input class="form__input" type="password" name="login-password" id="login-password"
-                                    required>
-                                <label class="form__placeholder" for="login-password">Пароль <span>*</span></label>
-                                <label class="form__password-checkbox"><input type="checkbox"></label>
-                            </div>
-
-                            <label class="form__checkbox login__remember"><input type="checkbox" name="remember-me"><span></span>
-                                Запомнить меня</label>
-                            <button class="login__forget-password">Забыли пароль?</button>
-
-                            <button class="form__log-in" type="submit">Войти</button>
-                            <a class="login__log-up" href="#">Регистрация</a>
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="registration-user-agreement">
+                                <span></span>
+                                Согласен(а) с
+                                <a href="#">Пользовательским соглашением</a>
+                            </label>
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="registration-receive-notifications" checked>
+                                <span></span>
+                                Получать уведомления о новинках, акциях
+                            </label>
+                            <button class="registration__btn" type="submit">Зарегистрироваться</button>
                         </form>
                     </section>
                 </div>
@@ -2575,6 +2622,10 @@
 </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>

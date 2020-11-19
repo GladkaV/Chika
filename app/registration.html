@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chika</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="document">
+    <div class="wrapper">
+        <div class="content">
+            @@include("./blocks/header/_header.html")
+            <main class="main">
+                <div class="container">
+                    <ul class="bread-crumbs">
+                        <li><a href="#">
+                                <img src="img/bread-crumbs.png" alt="home">
+                            </a></li>
+                        <li><span>Регистрация</span></li>
+                    </ul>
+                    <section class="registration">
+                        <h1 class="title">
+                            Регистрация
+                        </h1>
+                        <p class="registration__text">
+                            Зарегистрируйтесь, заполнив <strong>ВСЕ поля</strong> и получите <span>ПОДАРОК</span> с
+                            первым заказом
+                        </p>
+                        <form class="registration__form">
+                            <div class="registration__form-inner">
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="text" name="registration-first-name"
+                                        id="registration-first-name" required>
+                                    <label class="form__placeholder" for="registration-first-name">Ваше имя</label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="text" name="registration-last-name"
+                                        id="registration-last-name" required>
+                                    <label class="form__placeholder" for="registration-last-name">Ваша фамилия</label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="email" name="registration-email"
+                                        id="registration-email" required>
+                                    <label class="form__placeholder" for="registration-email">E-mail
+                                        <span>*</span></label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="text" name="registration-phone"
+                                        id="registration-phone" required>
+                                    <label class="form__placeholder" for="registration-phone">Номер телефона</label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="text" name="registration-city"
+                                        id="registration-city" required>
+                                    <label class="form__placeholder" for="registration-city">Ваш город</label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input datepicker-here" type='text' name="registration-birth"
+                                        id="registration-birth" required readonly />
+                                    <label class="form__placeholder" for="registration-birth">Дата рождения</label>
+                                    <span class="form__registration-birth"></span>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="password" name="registration-password"
+                                        id="registration-password" required>
+                                    <label class="form__placeholder" for="registration-password">Пароль
+                                        <span>*</span></label>
+                                    <label class="form__password-checkbox"><input type="checkbox"></label>
+                                </div>
+                                <div class="form__wrap-input">
+                                    <input class="form__input" type="password" name="registration-password-repeat"
+                                        id="registration-password-repeat" required>
+                                    <label class="form__placeholder" for="registration-password-repeat">Повторите пароль
+                                        <span>*</span></label>
+                                    <label class="form__password-checkbox"><input type="checkbox"></label>
+                                </div>
+                            </div>
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="registration-user-agreement">
+                                <span></span>
+                                Согласен(а) с
+                                <a href="#">Пользовательским соглашением</a>
+                            </label>
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="registration-receive-notifications" checked>
+                                <span></span>
+                                Получать уведомления о новинках, акциях
+                            </label>
+                            <button class="registration__btn" type="submit">Зарегистрироваться</button>
+                        </form>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        @@include("./blocks/footer/_footer.html")
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

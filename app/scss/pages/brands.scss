@@ -79,12 +79,12 @@
 }
 .brands__item-inner {
     max-width: 207px;
-    color: $dark;
+    // color: $dark;
     text-decoration: none;
     transition: all .3s;
 
     &:hover {
-        color: $red;
+        // color: $red;
 
         .brands__img {
             border-color: transparent;

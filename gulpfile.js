@@ -36,7 +36,8 @@ gulp.task('css', function () {
     return gulp.src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/slick-carousel/slick/slick.css',
-        'node_modules/magnific-popup/dist/magnific-popup.css'
+        'node_modules/magnific-popup/dist/magnific-popup.css',
+        'node_modules/air-datepicker/dist/css/datepicker.css'
     ])
         .pipe(concat('_libs.scss'))
         .pipe(gulp.dest('app/scss'))
@@ -59,6 +60,8 @@ gulp.task('js', function () {
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/air-datepicker/dist/js/datepicker.js',
+        'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
