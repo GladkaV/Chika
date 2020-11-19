@@ -235,30 +235,35 @@ $(function () {
     })
 
     // page reviews (rateYo)
-    // function initializationRateYo(element) {
-    //     element.rateYo({
-    //         readOnly: true,
-    //         starWidth: "16px",
-    //         fullStar: true,
-    //         spacing: "3px"
-    //     });
-    // }
+    function initializationRateYo(element) {
+        element.rateYo({
+            readOnly: true,
+            starWidth: "16px",
+            fullStar: true,
+            spacing: "3px"
+        });
+    }
 
-    // initializationRateYo($(".reviews__item-star"));
+    initializationRateYo($(".reviews__item-star"));
 
     // page reviews (popup)
     $('.reviews__btn').magnificPopup({});
-
-
-
-
-
 
     // page brands (brand list)
     $('.brands__list').click(function () {
         $(this).children().removeClass('active');
         $(event.target).addClass('active');
     })
+
+
+
+
+
+
+
+    
+
+
     // page brands (mixitup)
     let mixer = mixitup('.brands__inner');
 });
