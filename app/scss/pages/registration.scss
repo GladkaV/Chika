@@ -1,9 +1,23 @@
 .registration {
     padding-bottom: 150px;
-    
-    .form__wrap-input {
-        margin-bottom: 34px;
+
+    @media(max-width:450px) {
+        padding-bottom: 138px;
     }
+}
+.registration__form {
+    @media(max-width:450px) {
+        text-align: center;
+    }
+
+    .form__wrap-input + .form__wrap-input {
+        margin-top: 34px;
+
+        @media(max-width:450px) {
+            margin-top: 25px;
+        }
+    }
+    
     .form__checkbox {
         display: block;
         margin-bottom: 10px;
@@ -14,6 +28,11 @@
             text-decoration: none;
         }
     }
+    .form__checkbox {
+        @media(max-width:450px) {
+            text-align: left;
+        }
+    }
 }
 .registration__text {
     padding-top: 13px;
@@ -21,6 +40,10 @@
     font-size: 15px;
     line-height: 20px;
     letter-spacing: 0.3px;
+
+    @media(max-width:450px) {
+        font-size: 13px;
+    }
 
     span {
         // color: $red;
@@ -30,6 +53,10 @@
 .registration__form-inner {
     max-width: 328px;
     margin-bottom: 40px;
+
+    @media(max-width:450px) {
+        margin-bottom: 20px;
+    }
 }
 .registration__btn {
     font-weight: 600;
