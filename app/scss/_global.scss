@@ -285,7 +285,10 @@ body {
     background-size: contain;
 }
 .mfp-bg {
-    background: rgba(0, 0, 0, 0.4);
+    background: transparent;
+}
+.mfp-content {
+    height: 100%;
 }
 .mfp-wrap {
     .callback {

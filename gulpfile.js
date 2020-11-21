@@ -86,7 +86,6 @@ gulp.task('watch', function () {
     gulp.watch('app/**/**/*.scss', gulp.parallel('scss'))
     gulp.watch('app/**/**/*.html', gulp.parallel('html', 'fileinclude'))
     gulp.watch('app/**/**/*.js', gulp.parallel('script'))
-    // gulp.watch('app/img/**/', gulp.parallel('img'))
 });
 
 gulp.task('default', gulp.parallel('clean', 'css', 'scss', 'js', 'script', 'img', 'browser-sync', 'watch', 'fileinclude'));

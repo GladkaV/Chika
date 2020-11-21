@@ -40,14 +40,15 @@ $(function () {
     })
 
     // scroll, fixed header
-    // $(window).scroll(function () {
-    //     let top = $(document).scrollTop();
-    //     if (top > 60) {
-    //         $(".header__content").addClass(' header__content--fixed');
-    //     } else {
-    //         $(".header__content").removeClass(' header__content--fixed');
-    //     }
-    // });
+    $(window).scroll(function () {
+        $.magnificPopup.close();
+        let top = $(document).scrollTop();
+        if (top > 60) {
+            $(".header__content").addClass(' header__content--fixed');
+        } else {
+            $(".header__content").removeClass(' header__content--fixed');
+        }
+    });
 
     // form
     $('form').on("submit", function (event) {

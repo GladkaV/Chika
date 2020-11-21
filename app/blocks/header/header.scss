@@ -501,7 +501,7 @@
         left: 70px;
     }
     @media (max-width:670px) {
-        left: -80px;
+        left: -90px;
     }
 
     &.active {
@@ -523,13 +523,18 @@
         font-size: 16px;
         line-height: 23px;
         color: $dark;
-        transition: all .3s;
+        transition: all .1s;
         border-bottom: 1px solid $light_gray;
+        white-space: nowrap;
 
         &:hover {
+            color: $red;
             border-color: $red;
         }
     }
+}
+.header__user-list:hover + .header__content-item.user .header__content-item-text{
+    color: $red;
 }
 .header__user-item {
     
@@ -696,6 +701,11 @@
     justify-content: center;
     align-items: center;
     padding: 0 10px;
+    height: 100vh;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    background: rgba(0, 0, 0, 0.4);
+
 
     .form__log-in {
         &:hover {
