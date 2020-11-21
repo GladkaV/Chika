@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chika</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="document">
+    <div class="wrapper">
+        <div class="content">
+            @@include("./blocks/header/_header.html")
+            <main class="main">
+                <div class="container">
+                    <ul class="bread-crumbs">
+                        <li><a href="#">
+                                <img src="img/bread-crumbs.png" alt="home">
+                            </a>
+                        </li>
+                        <li><span>Личный кабинет</span></li>
+                    </ul>
+                    <section class="cabinet">
+                        <h1 class="title">
+                            Личный кабинет
+                        </h1>
+                        <div class="cabinet__inner">
+                            <div class="cabinet__tabs">
+                                <div class="tabs">
+                                    <span class="tab active" data-id="1">Настройки профиля</span>
+                                    <a class="cabinet__link" href="#">Сменить пароль</a>
+                                    <span class="tab" data-id="2">Мои заказы</span>
+                                    <a class="cabinet__link" href="#">Избранное</a>
+                                </div>
+                                <div class="tab_content">
+                                    <div class="tab-item" id="1">
+                                        <form class="cabinet__form">
+                                            <div class="cabinet__form-inner">
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="cabinet-first-name"
+                                                        id="cabinet-first-name" value="Елизавета" required>
+                                                    <label class="form__placeholder" for="cabinet-first-name">Ваше
+                                                        имя</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="cabinet-last-name"
+                                                        id="cabinet-last-name" value="Пушкина" required>
+                                                    <label class="form__placeholder" for="cabinet-last-name">Ваша
+                                                        фамилия</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="email" name="cabinet-email"
+                                                        id="cabinet-email" value="pushkina.ya@gmail.com" required>
+                                                    <label class="form__placeholder" for="cabinet-email">E-mail</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="cabinet-phone"
+                                                        id="cabinet-phone" value="+38 (059) 589-69-56" required>
+                                                    <label class="form__placeholder" for="cabinet-phone">Номер
+                                                        телефона</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="cabinet-city"
+                                                        id="cabinet-city" value="Киев" required>
+                                                    <label class="form__placeholder" for="cabinet-city">Ваш
+                                                        город</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input datepicker-here" type='text'
+                                                        name="cabinet-birth" id="cabinet-birth" value="03.12.1995"
+                                                        required readonly />
+                                                    <label class="form__placeholder" for="cabinet-birth">Дата
+                                                        рождения</label>
+                                                    <span class="cabinet-birth"></span>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="cabinet-inst"
+                                                        id="cabinet-inst" value="matveeva_svetka">
+                                                    <label class="form__placeholder"
+                                                        for="cabinet-inst">Instagram.com/имя пользователя</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="cabinet-fb"
+                                                        id="cabinet-fb" value="matveeva_svetka">
+                                                    <label class="form__placeholder" for="cabinet-fb">Facebook.com/имя
+                                                        пользователя</label>
+                                                </div>
+                                            </div>
+                                            <button class="cabinet__btn" type="submit">Сохранить</button>
+                                        </form>
+                                    </div>
+                                    <div class="tab-item active-tab" id="2">
+                                        <div class="orders">
+                                            <div class="orders__item">
+                                                <div class="orders__item-info">
+                                                    <div class="orders__item-num">
+                                                        № 375445
+                                                    </div>
+                                                    <div class="orders__item-status">
+                                                        Оплачен. Заказ выполнен
+                                                    </div>
+                                                </div>
+                                                <div class="orders__item-date">15.02.2020</div>
+                                                <div class="orders__item-sum">
+                                                    <span class="orders__item-price">2560</span>
+                                                    <span class="orders__item-penny">.00</span>
+                                                    <span class="orders__item-currency">грн</span>
+                                                </div>
+                                                <a class="orders__item-link" href="#">Детали заказа
+                                                    <svg width="31" height="8" viewBox="0 0 31 8" fill="none">
+                                                        <path d="M30.3536 4.35356C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464468C26.9763 0.269206 26.6597 0.269206 26.4645 0.464468C26.2692 0.659731 26.2692 0.976313 26.4645 1.17158L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53554C26.6597 7.7308 26.9763 7.7308 27.1716 7.53554L30.3536 4.35356ZM-4.37114e-08 4.5L30 4.5L30 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="orders__item">
+                                                <div class="orders__item-info">
+                                                    <div class="orders__item-num">
+                                                        № 5545445
+                                                    </div>
+                                                    <div class="orders__item-status">
+                                                        Отправлен
+                                                    </div>
+                                                </div>
+                                                <div class="orders__item-date">23.02.2020</div>
+                                                <div class="orders__item-sum">
+                                                    <span class="orders__item-price">2560</span>
+                                                    <span class="orders__item-penny">.00</span>
+                                                    <span class="orders__item-currency">грн</span>
+                                                </div>
+                                                <a class="orders__item-link" href="#">Детали заказа
+                                                    <svg width="31" height="8" viewBox="0 0 31 8" fill="none">
+                                                        <path d="M30.3536 4.35356C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464468C26.9763 0.269206 26.6597 0.269206 26.4645 0.464468C26.2692 0.659731 26.2692 0.976313 26.4645 1.17158L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53554C26.6597 7.7308 26.9763 7.7308 27.1716 7.53554L30.3536 4.35356ZM-4.37114e-08 4.5L30 4.5L30 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="orders__item">
+                                                <div class="orders__item-info">
+                                                    <div class="orders__item-num">
+                                                        № 785445
+                                                    </div>
+                                                    <div class="orders__item-status">
+                                                        В обработке
+                                                    </div>
+                                                </div>
+                                                <div class="orders__item-date">05.02.2020</div>
+                                                <div class="orders__item-sum">
+                                                    <span class="orders__item-price">2560</span>
+                                                    <span class="orders__item-penny">.00</span>
+                                                    <span class="orders__item-currency">грн</span>
+                                                </div>
+                                                <a class="orders__item-link" href="#">Детали заказа
+                                                    <svg width="31" height="8" viewBox="0 0 31 8" fill="none">
+                                                        <path d="M30.3536 4.35356C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464468C26.9763 0.269206 26.6597 0.269206 26.4645 0.464468C26.2692 0.659731 26.2692 0.976313 26.4645 1.17158L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53554C26.6597 7.7308 26.9763 7.7308 27.1716 7.53554L30.3536 4.35356ZM-4.37114e-08 4.5L30 4.5L30 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="orders__item">
+                                                <div class="orders__item-info">
+                                                    <div class="orders__item-num">
+                                                        № 375445
+                                                    </div>
+                                                    <div class="orders__item-status">
+                                                        В работе
+                                                    </div>
+                                                </div>
+                                                <div class="orders__item-date">25.02.2020</div>
+                                                <div class="orders__item-sum">
+                                                    <span class="orders__item-price">2560</span>
+                                                    <span class="orders__item-penny">.00</span>
+                                                    <span class="orders__item-currency">грн</span>
+                                                </div>
+                                                <a class="orders__item-link" href="#">Детали заказа
+                                                    <svg width="31" height="8" viewBox="0 0 31 8" fill="none">
+                                                        <path d="M30.3536 4.35356C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464468C26.9763 0.269206 26.6597 0.269206 26.4645 0.464468C26.2692 0.659731 26.2692 0.976313 26.4645 1.17158L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53554C26.6597 7.7308 26.9763 7.7308 27.1716 7.53554L30.3536 4.35356ZM-4.37114e-08 4.5L30 4.5L30 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabinet__aside">
+                                <button class="cabinet__aside-btn" type="submit">Выйти</button>
+                                <div class="cabinet__bonus">
+                                    <div class="cabinet__bonus-title">
+                                        Бонусных балов
+                                    </div>
+                                    <div class="cabinet__bonus-num"><span>896</span></div>
+                                    <div class="cabinet__bonus-text">
+                                        Бонусные балы вам начисляются после каждой покупки.
+                                    </div>
+                                    <a class="cabinet__bonus-link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        @@include("./blocks/footer/_footer.html")
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

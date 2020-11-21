@@ -40,15 +40,15 @@ $(function () {
     })
 
     // scroll, fixed header
-    $(window).scroll(function () {
-        $.magnificPopup.close();
-        let top = $(document).scrollTop();
-        if (top > 60) {
-            $(".header__content").addClass(' header__content--fixed');
-        } else {
-            $(".header__content").removeClass(' header__content--fixed');
-        }
-    });
+    // $(window).scroll(function () {
+    //     $.magnificPopup.close();
+    //     let top = $(document).scrollTop();
+    //     if (top > 60) {
+    //         $(".header__content").addClass(' header__content--fixed');
+    //     } else {
+    //         $(".header__content").removeClass(' header__content--fixed');
+    //     }
+    // });
 
     // form
     $('form').on("submit", function (event) {
@@ -270,9 +270,17 @@ $(function () {
     })
 
     // page registration (mask phone)
-    $('#registration-phone').mask("+38(999) 999 99 99");
+    $('#registration-phone').mask("+38 (999) 999 99 99");
 
-    
+    // page cabinet (tabs)
+    $('.tab').on('click', function (event) {
+        var id = $(this).attr('data-id');
+        $('.wrapper').find('.tab-item').removeClass('active-tab').hide();
+        $('.wrapper .tabs').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
 
 
 

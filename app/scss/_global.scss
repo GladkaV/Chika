@@ -392,3 +392,11 @@ input[type=number]
 
     }
 }
+
+.tab-item {
+    display: none;
+
+    &.active-tab {
+        display: block;
+    }
+}
