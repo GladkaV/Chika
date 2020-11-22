@@ -1,9 +1,23 @@
 .cabinet {
     padding-bottom: 150px;
 
+    @media (max-width: 450px) {
+        padding-bottom: 134px;
+    } 
+
     .tabs {
         display: flex;
         justify-content: space-between;
+        max-width: 780px;
+
+        @media (max-width: 1050px) {
+            max-width: 850px;
+            padding-right: 70px;
+        }  
+        @media (max-width: 850px) {
+            flex-direction: column;
+            padding-right: 0;
+        }       
     }
     .tab,
     .cabinet__link {
@@ -13,10 +27,31 @@
         line-height: 24px;
         text-decoration: none;
         cursor: pointer;
+
+        @media (max-width: 850px) {
+            margin-bottom: 10px;
+        } 
+        @media (max-width: 450px) {
+            font-size: 16px;
+            line-height: 20px;
+        } 
+    }
+    .tab {
+        @media (max-width: 850px) {
+            align-self: self-start;
+            border-bottom: 3px solid transparent;
+        }
+        @media (max-width: 450px) {
+            border-width: 2px;
+        } 
     }
     .tab.active {
         color: $dark;
         border-bottom: 3px solid $red;
+
+        @media (max-width: 450px) {
+            border-width: 2px;
+        } 
     }
     .form__input[value] + label{
         font-size: 13px;
@@ -32,12 +67,32 @@
     padding-top: 35px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1050px) {
+        display: block;
+        position: relative;
+    }
+    @media (max-width: 450px) {
+        padding-top: 14px;
+    } 
 }
 .cabinet__tabs {
     width: 100%;
-    max-width: 780px;
+    max-width: 845px;
     flex-shrink: 1;
-    margin-right: 15px;
+    margin-right: 25px;
+
+    @media (max-width: 1050px) {
+        padding-right: 70px;
+        max-width: 915px;
+    }
+    @media (max-width: 850px) {
+        max-width: 100%;
+        padding-right: 0;
+    } 
+}
+.cabinet__form {
+    max-width: 780px;
 }
 .cabinet__form-inner {
     display: flex;
@@ -48,9 +103,29 @@
     padding-top: 58px;
     margin-bottom: 14px;
 
+    @media (max-width: 600px) {
+        height: auto;
+    }
+    @media (max-width: 450px) {
+        padding-top: 33px;
+        margin-bottom: 0;
+    } 
+
     &>div {
         width: 47%;
-        margin: 0 0 34px;
+        margin: 0 48px 34px 0;
+
+        @media (max-width: 750px) {
+            width: calc(47% - 10px);
+        }
+        @media (max-width: 600px) {
+            margin-right: 0;
+            width: 100%;
+            max-width: 400px;
+        }
+        @media (max-width: 450px) {
+            margin-bottom: 25px;
+        } 
     }
 }
 .cabinet__btn {
@@ -62,31 +137,69 @@
     border-radius: 5px;
     padding: 11px 35px;
     cursor: pointer;
+
+    @media (max-width: 450px) {
+        
+    } 
 }
 .orders {
     max-width: 845px;
     width: 100%;
     padding-top: 29px;
+
+    @media (max-width: 450px) {
+        padding-top: 9px;
+    } 
 }
 .orders__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #C4C4C4;
-    padding: 0px 0px 0px 30px;
+    padding: 0px 45px 0px 30px;
     min-height: 104px;
+
+    @media (max-width: 700px) {
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        row-gap: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    } 
+    @media (max-width: 450px) {
+        row-gap: 0;
+        padding-top: 20px;
+    }
+
+    &>div,
+    &>a {
+        @media (max-width: 700px) {
+            width: 50%;
+        } 
+
+        &.orders__item-sum,
+        &.orders__item-link {
+            @media (max-width: 450px) {
+                width: auto;
+            } 
+        }
+    }
 }
 .orders__item-info {
     align-self: flex-start;
     padding: 31px 0 5px;
     max-width: 140px;
     width: 100%;
+
+    @media (max-width: 450px) {
+        padding-top: 0;
+    } 
 }
 .orders__item-num {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 5px; 
 }
 .orders__item-status {
     font-weight: 500;
@@ -97,9 +210,17 @@
 .orders__item-date {
     font-size: 16px;
     line-height: 20px;
+
+    @media (max-width: 700px) {
+        text-align: right;
+    }
+    @media (max-width: 450px) {
+        align-self: flex-start;
+    } 
 }
 .orders__item-sum {
     font-weight: 700;
+    font-size: 12px;
     letter-spacing: 1.33333px;
     display: flex;
     align-items: flex-end;
@@ -107,11 +228,7 @@
 .orders__item-price {
     font-size: 18px;
 }
-.orders__item-penny {
-    font-size: 12px;
-}
 .orders__item-currency {
-    font-size: 12px;
     font-weight: 600;
 }
 .orders__item-link {
@@ -124,12 +241,35 @@
     text-decoration: none;
     transition: all .2s;
     margin-top: 3px;
-    padding: 9px 10px 5px 45px;
+    padding: 8px 12px 6px 28px;
+
+    @media (max-width: 700px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @media (max-width: 450px) {
+        white-space: nowrap;
+    }
 
     svg {
         fill: #505759;
         transition: all .2s;
         margin-bottom: 1px;
+
+        @media (max-width: 450px) {
+            margin-left: -16px;
+            margin-bottom: 4px;
+        }
+    }
+    span {
+        margin-left: 12px;
+
+        @media (max-width: 450px) {
+            display: inline-block;
+            width: 14px;
+            height: 8px;
+            overflow: hidden; 
+        }
     }
 
     &:hover {
@@ -142,6 +282,15 @@
 }
 .cabinet__aside {
     flex-grow: 2;
+    max-width: 430px;
+    flex-shrink: 0;
+
+    @media (max-width: 1050px) {
+        padding-top: 60px;
+    }
+    @media (max-width: 450px) {
+        padding-top: 80px;
+    } 
 }
 .cabinet__aside-btn {
     font-weight: 500;
@@ -155,10 +304,22 @@
     margin: 0 7px 64px auto;
     padding: 0;
     cursor: pointer;
+
+    @media (max-width: 1050px) {
+        position: absolute;
+        top: 35px;
+        right: 7px;
+        margin-right: 0;
+    }
+    @media (max-width: 450px) {
+        font-size: 14px;
+        line-height: 17px;  
+        right: 2px;
+        top: 14px;
+    } 
 }
 .cabinet__bonus {
     max-width: 316px;
-    margin: 0 auto;
     border: 3px solid $dark;
     padding-bottom: 10px;
 }
@@ -205,6 +366,10 @@
     line-height: 23px;
     letter-spacing: 0.3px;
     padding: 0 29px;
+
+    @media (max-width: 450px) {
+        padding: 0 10px 0 20px;
+    } 
 }
 .cabinet__bonus-link {
     font-weight: 300;
@@ -214,4 +379,8 @@
     text-decoration-line: underline;
     color: $red;
     padding-left: 29px;
+
+    @media (max-width: 450px) {
+        padding-left: 20px;
+    } 
 }
