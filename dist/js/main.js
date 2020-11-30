@@ -215,18 +215,11 @@ $(function () {
     cartSum();
 
     // page blog (load more)
-    let blogsitems = $('.blogs__wrap-item');
+    let blogsitems = $('.blogs__wrap-item'),
+        delta = 180;
     $('.load-more').click(function () {
-        let delta = 180;
         $(this).find('span').css('transform', `rotate(${delta}deg)`);
-
-        setTimeout(() => {
-            blogsitems.each(function (index, element) {
-                $(element).show();
-            })
-
-            $(this).hide();
-        }, 300);
+        delta += 180;
     })
 
     // page blog (max-width:450px show blogs items)
@@ -281,6 +274,87 @@ $(function () {
         $('#' + id).addClass('active-tab').fadeIn();
         return false;
     });
+
+    // page one-brand (style select)
+    $('select').styler();
+
+    // aside (filter)
+    $('.filter__btn').click(function () {
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    })
+
+    // aside (price range slider)
+    let $range = $(".js-range-slider"),
+        $inputFrom = $(".js-input-from"),
+        $inputTo = $(".js-input-to"),
+        instance,
+        min = 0,
+        max = 2500,
+        from = 0,
+        to = 0;
+
+    $range.ionRangeSlider({
+        skin: "round",
+        type: "double",
+        min: min,
+        max: max,
+        from: 239,
+        to: 2390,
+        onStart: updateInputs,
+        onChange: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);
+    }
+
+    $inputFrom.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+
+        instance.update({
+            from: val
+        });
+    });
+
+    $inputTo.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+
+        instance.update({
+            to: val
+        });
+    });
+
+    // page one brand (max-width: 850px - btn filter, sort)
+    $('.one-brand__bnt-filtr').click(function () {
+        $('.filter').addClass('active');
+    })
+    $('.filter__close').click(function () {
+        $('.filter').removeClass('active');
+    })
+
+    $('.one-brand__bnt-sort').click(function () {
+        $('.one-brand__filter').slideToggle();
+    })
 
 
 
