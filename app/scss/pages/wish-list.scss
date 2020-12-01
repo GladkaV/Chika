@@ -169,13 +169,15 @@
     }
     @media(max-width: 450px) {
         max-width: 83%;
-        min-height: 127px;
+        min-height: 0;
+        height: 127px;
         margin-bottom: 10px;
     }
 
     img {
         max-width: 100%;
         height: auto;
+        max-height: 100%;
     }
 }
 .product__img--adaptive {
@@ -187,7 +189,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
-    display: inline-block;
+    display: block;
     // color: $dark;
     text-align: center;
     text-transform: uppercase;

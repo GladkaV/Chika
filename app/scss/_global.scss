@@ -42,26 +42,35 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    row-gap: 7px;
 
     @media(max-width:480px) {
         margin-bottom: 7px;
     }
 
-    li + li {
-        padding-left: 16px;
-        margin-left: 10px;
+    li:not(:last-child) {
         position: relative;
+        padding-right: 16px;
+        margin-right: 10px;
+        
 
         &::before {
             content: "";
             position: absolute;
-            left: 0;
-            top: 4px;
+            right: 0;
+            bottom: 4px;
             width: 6px;
             height: 11px;
             background-image: url(../../img/bread-crumbs-arrow.png);
             background-repeat: no-repeat;
             background-position: center;
+        }
+    }
+
+    li:first-child {
+        &::before {
+            bottom: 6px;
         }
     }
 
@@ -529,7 +538,7 @@ input[type=number]
         position: absolute;
         width: 26px;
         height: 3px;
-        background-color: $dark;
+        // background-color: $dark;
         left: 18%;
         top: 10px;
     }
@@ -546,7 +555,7 @@ input[type=number]
     font-size: 20px;
     line-height: 22px;
     padding: 0 50px 16px 18px;
-    border-bottom: 3px solid $red;
+    // border-bottom: 3px solid $red;
 }
 .filter__list {
     margin: 0;
@@ -586,7 +595,7 @@ input[type=number]
         top: 48%;
         height: 1px;
         width: 19px;
-        background-color: $dark;
+        // background-color: $dark;
         transition: all .3s;
     }
 }
@@ -751,10 +760,10 @@ input[type=number]
     background-color: #E1E1E1;
 }
 .irs--round .irs-bar {
-    background-color: $red;
+    // background-color: $red;
 }
 .irs--round .irs-handle {
-    border: 3px solid $red;
+    // border: 3px solid $red;
     width: 23px;
     height: 23px;
     cursor: pointer;

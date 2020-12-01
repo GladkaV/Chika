@@ -1,0 +1,47 @@
+.catalog-img {
+    background-image: url(../../img/catalog.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    min-height: 140px;
+    margin-top: 16px;
+
+    @media(max-width: 850px) {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
+}
+.catalog-img__text {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    max-width: 300px;
+    margin: 0 55px 10px auto;
+    padding-top: 35px;
+    color: #fff;
+
+    @media(max-width: 480px) {
+        margin-right: auto;
+    }
+    
+    span {
+        display: block;
+        font-weight: 700;
+        padding-top: 6px;
+    }
+}
+.catalog {
+    margin-bottom: 97px;
+}
+.catalog-description {
+    padding-bottom: 70px;
+
+    .one-brand__description-title {
+        margin-bottom: 40px;
+    }
+    .one-brand__description-text {
+        max-width: 1340px;
+        margin-right: 45px;
+        height: 80px;
+    }
+}
