@@ -160,7 +160,7 @@ $(function () {
     });
 
     // page cart (item sum)
-    $('.quantity-button').click(function () {
+    $('.cart__item .quantity-button').click(function () {
         let cartItem = $(this).parents('.cart__item'),
             quantity = $(cartItem).find('.cart__item-input').val(),
             price = $(cartItem).find('.cart__item-input').data('price'),
@@ -265,7 +265,7 @@ $(function () {
     // page registration (mask phone)
     $('#registration-phone').mask("+38 (999) 999 99 99");
 
-    // page cabinet (tabs)
+    // tabs
     $('.tab').on('click', function (event) {
         var id = $(this).attr('data-id');
         $('.wrapper').find('.tab-item').removeClass('active-tab').hide();
@@ -356,6 +356,36 @@ $(function () {
         $('.one-brand__filter').slideToggle();
     })
 
+    // page order (remove item)
+    $('.order__aside-remove').click(function () {
+        $(this).parents('.order__aside-item').remove();
+        orderSum();
+    })
+
+    // page order (total sum)
+    $('.order__aside-item .quantity-button').click(function () {
+        orderSum();
+    })
+
+    function orderSum() {
+        let products = $('.order__aside-item'),
+            productSum, totalSum = 0, penny; 
+
+        products.each(function () {
+            productSum = +($(this).find('.quantity__input').val() * +$(this).find('.quantity__input').data('price'));
+            totalSum += productSum;
+        })
+
+        $('.order__aside-number').text(Math.trunc(totalSum));
+
+        penny = Math.trunc((totalSum - Math.trunc(totalSum)) * 100);
+        if(penny === 0) {
+            $('.order__aside-penny').text('00');
+        } else {
+            $('.order__aside-penny').text(penny);
+        }
+    }
+    orderSum();
 
 
 
