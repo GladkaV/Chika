@@ -53,8 +53,8 @@
         }
 
         &.active {
-            color: $dark;
-            border-bottom-color: $red;
+            // color: $dark;
+            // border-bottom-color: $red;
         }
     }
 }
@@ -135,14 +135,11 @@
     width: 90px;
     height: 107px;
     display: flex;
-    align-items: flex-end;
-
-    @media(max-width: 500px) {
-        align-items: flex-start;
-    }
+    align-items: flex-start;
 
     img {
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 .order__aside-content {

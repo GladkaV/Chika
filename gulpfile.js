@@ -6,7 +6,9 @@ let gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     autoprefixer = require('gulp-autoprefixer'),
-    fileinclude = require('gulp-file-include');
+    watch = require('gulp-watch'),
+    fileinclude = require('gulp-file-include'),
+    imagemin = require('gulp-imagemin');;
 
 gulp.task('clean', async function(){
     del.sync('dist');
@@ -74,6 +76,12 @@ gulp.task('js', function () {
         .pipe(browserSync.reload({ stream: true }))
 })
 
+gulp.task('img', function () {
+    return gulp.src('app/img/**/*.{png,jpg,svg,webp}')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+})
+
 gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
@@ -82,15 +90,16 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('img', function () {
-    let buildImg = gulp.src('app/img/**/*.*')
-        .pipe(gulp.dest('dist/img'));
+gulp.task('fonts', function () {
+    return gulp.src('app/fonts/**/*.*')
+        .pipe(gulp.dest('dist/fonts'))
 })
 
 gulp.task('watch', function () {
-    gulp.watch('app/**/**/*.scss', gulp.parallel('scss'))
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'))
     gulp.watch('app/**/**/*.html', gulp.parallel('html', 'fileinclude'))
     gulp.watch('app/**/**/*.js', gulp.parallel('script'))
+    gulp.watch("app/img/**/*.{png,jpg,svg,webp}", gulp.parallel('img'));
 });
 
-gulp.task('default', gulp.parallel('clean', 'css', 'scss', 'js', 'script', 'img', 'browser-sync', 'watch', 'fileinclude'));
+gulp.task('default', gulp.parallel('clean', 'html', 'css', 'scss', 'img', 'js', 'script', 'fonts', 'browser-sync', 'watch', 'fileinclude'));
