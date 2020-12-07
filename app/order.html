@@ -28,20 +28,90 @@
                         <h1 class="title">
                             Оформление заказа
                         </h1>
-                        <div class="order__tabs">
-                            <div class="tabs">
-                                <span class="tab active" data-id="1">Новый покупатель</span>
-                                <span class="tab" data-id="2">Я постоянный клиент</span>
-                            </div>
-                            <div class="tab_content">
-                                <div class="tab-item active-tab" id="1">
-
-
-
-
+                        <div class="order__inner">
+                            <div class="order__tabs">
+                                <div class="tabs">
+                                    <span class="tab active" data-id="1">Новый покупатель</span>
+                                    <span class="tab" data-id="2">Я постоянный клиент</span>
                                 </div>
-                                <div class="tab-item" id="2">
-                                    <div class="tab-item__inner">
+                                <div class="tab_content">
+                                    <div class="tab-item active-tab" id="1">
+                                        <form class="new-customer">
+                                            <div class="new-customer__tabs">
+                                                <span class="new-customer__tabs-decor"></span>
+                                                <span>1. Контактные данные</span>
+                                                <span>2. Оплата и доставка</span>
+                                            </div>
+                                            <div class="new-customer__tabs-inner active">
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="order-first-name"
+                                                        id="order-first-name" required>
+                                                    <label class="form__placeholder" for="order-first-name">Ваше
+                                                        имя</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="order-last-name"
+                                                        id="order-last-name" required>
+                                                    <label class="form__placeholder" for="order-last-name">Ваша
+                                                        фамилия</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="text" name="order-phone"
+                                                        id="order-phone" required>
+                                                    <label class="form__placeholder" for="order-phone">Номер
+                                                        телефона</label>
+                                                </div>
+                                                <div class="form__wrap-input">
+                                                    <input class="form__input" type="email" name="order-email"
+                                                        id="order-email-1" required>
+                                                    <label class="form__placeholder" for="order-email-1">E-mail</label>
+                                                </div>
+                                            </div>
+                                            <div class="new-customer__tabs-inner">
+                                                <div class="new-customer__tabs-col">
+                                                    <div class="new-customer__tabs-col-title">
+                                                        Выберите вариант оплаты
+                                                    </div>
+                                                    <select>
+                                                        <option>Наличные</option>
+                                                        <option>Безналичные</option>
+                                                    </select>
+                                                    <div class="form__wrap-input new-customer__textarea">
+                                                        <textarea id="order-comment" name="order-comment"></textarea>
+                                                        <label for="order-comment">Комментарий к заказу</label>
+                                                    </div>
+                                                </div>
+                                                <div class="new-customer__tabs-col">
+                                                    <div class="new-customer__tabs-col-title new-customer__tabs-col-title--bg">
+                                                        Выберите вариант доставки
+                                                    </div>
+                                                    <select name="delivery-service">
+                                                        <option value="new-post">Новая почта</option>
+                                                        <option value="ukr-post">Укр почта</option>
+                                                    </select>
+                                                    <select name="city">
+                                                        <option disabled selected>Город</option>
+                                                        <option value="Kyiv">Киев</option>
+                                                        <option value="Lviv">Львов</option>
+                                                    </select>
+                                                    <select name="delivery-type">
+                                                        <option disabled selected>Тип доставки</option>
+                                                        <option value="pickup">Самовывоз</option>
+                                                        <option value="courier">Курьер</option>
+                                                    </select>
+                                                    <select name="delivery-address">
+                                                        <option disabled selected>Адрес доставки</option>
+                                                        <option value="branch">Отделение</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="new-customer__tabs-btn" style="overflow:auto;">
+                                                <button class="new-customer__tabs-prev" type="button">Previous</button>
+                                                <button class="new-customer__tabs-next active" type="button">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tab-item" id="2">
                                         <form class="regular-customer">
                                             <div class="form__wrap-input">
                                                 <input class="form__input" type="email" name="order-email"
@@ -57,89 +127,100 @@
                                             <a class="login__forget-password" href="#">Забыли пароль?</a>
                                             <button class="form__log-in" type="submit">Войти</button>
                                         </form>
-                                        <!-- start aside -->
-                                        <div class="order__aside">
-                                            <div class="order__aside-items">
-                                                <div class="order__aside-item">
-                                                    <div class="order__aside-img">
-                                                        <img src="img/product/item-1.png" alt="">
-                                                    </div>
-                                                    <div class="order__aside-content">
-                                                        <h6 class="order__aside-title">
-                                                            Набор миниатюр для глубокого увлажнения кожи лица:
-                                                            крем-гель, эссенция и
-                                                            крем Dr.Jart+ Vital Hydra Kit 15ml
-                                                        </h6>
-                                                        <div class="order__aside-price">
-                                                            400.
-                                                            <span class="order__item-penny">60</span>
-                                                            <span class="order__item-currency">грн</span>
-                                                        </div>
-                                                        <div class="quantity">
-                                                            <input class="quantity__input" data-price="400.60"
-                                                                type="number" min="1" step="1" value="1">
-                                                        </div>
-                                                        <button class="order__aside-remove"></button>
-                                                    </div>
-                                                </div>
-                                                <div class="order__aside-item">
-                                                    <div class="order__aside-img">
-                                                        <img src="img/product/item-4.png" alt="">
-                                                    </div>
-                                                    <div class="order__aside-content">
-                                                        <h6 class="order__aside-title">
-                                                            Антибактериальный спрей для рук "sweet mint"
-                                                        </h6>
-                                                        <div class="order__aside-price">
-                                                            100.
-                                                            <span class="order__item-penny">00</span>
-                                                            <span class="order__item-currency">грн</span>
-                                                        </div>
-                                                        <div class="quantity">
-                                                            <input class="quantity__input" data-price="100.00"
-                                                                type="number" min="1" step="1" value="1">
-                                                        </div>
-                                                        <button class="order__aside-remove"></button>
-                                                    </div>
-                                                </div>
-                                                <div class="order__aside-item">
-                                                    <div class="order__aside-img">
-                                                        <img src="img/product/item-2.png" alt="">
-                                                    </div>
-                                                    <div class="order__aside-content">
-                                                        <h6 class="order__aside-title">
-                                                            Набор миниатюр для глубокого увлажнения кожи лица:
-                                                            крем-гель, эссенция и
-                                                            крем Dr.Jart+ Vital Hydra Kit 15ml
-                                                        </h6>
-                                                        <div class="order__aside-price">
-                                                            400.
-                                                            <span class="order__item-penny">60</span>
-                                                            <span class="order__item-currency">грн</span>
-                                                        </div>
-                                                        <div class="quantity">
-                                                            <input class="quantity__input" data-price="400.60"
-                                                                type="number" min="1" step="1" value="1">
-                                                        </div>
-                                                        <button class="order__aside-remove"></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="order__aside-sum">
-                                                <div class="order__aside-text">
-                                                    Общая стоимость заказа:
-                                                </div>
-                                                <div class="order__aside-num">
-                                                    <span class="order__aside-number"></span>.
-                                                    <span class="order__aside-penny">00</span>
-                                                    <span class="order__aside-currency">грн.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end aside -->
                                     </div>
                                 </div>
                             </div>
+                            <!-- start aside -->
+                            <form class="order__aside">
+                                <div class="order__aside-items">
+                                    <div class="order__aside-item">
+                                        <div class="order__aside-img">
+                                            <img src="img/product/item-1.png" alt="">
+                                        </div>
+                                        <div class="order__aside-content">
+                                            <h6 class="order__aside-title">
+                                                Набор миниатюр для глубокого увлажнения кожи лица:
+                                                крем-гель, эссенция и
+                                                крем Dr.Jart+ Vital Hydra Kit 15ml
+                                            </h6>
+                                            <div class="order__aside-price">
+                                                400.
+                                                <span class="order__item-penny">60</span>
+                                                <span class="order__item-currency">грн</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <input class="quantity__input" data-price="400.60" type="number" min="1"
+                                                    step="1" value="1">
+                                            </div>
+                                            <button class="order__aside-remove"></button>
+                                        </div>
+                                    </div>
+                                    <div class="order__aside-item">
+                                        <div class="order__aside-img">
+                                            <img src="img/product/item-4.png" alt="">
+                                        </div>
+                                        <div class="order__aside-content">
+                                            <h6 class="order__aside-title">
+                                                Антибактериальный спрей для рук "sweet mint"
+                                            </h6>
+                                            <div class="order__aside-price">
+                                                100.
+                                                <span class="order__item-penny">00</span>
+                                                <span class="order__item-currency">грн</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <input class="quantity__input" data-price="100.00" type="number" min="1"
+                                                    step="1" value="1">
+                                            </div>
+                                            <button class="order__aside-remove"></button>
+                                        </div>
+                                    </div>
+                                    <div class="order__aside-item">
+                                        <div class="order__aside-img">
+                                            <img src="img/product/item-2.png" alt="">
+                                        </div>
+                                        <div class="order__aside-content">
+                                            <h6 class="order__aside-title">
+                                                Набор миниатюр для глубокого увлажнения кожи лица:
+                                                крем-гель, эссенция и
+                                                крем Dr.Jart+ Vital Hydra Kit 15ml
+                                            </h6>
+                                            <div class="order__aside-price">
+                                                400.
+                                                <span class="order__item-penny">60</span>
+                                                <span class="order__item-currency">грн</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <input class="quantity__input" data-price="400.60" type="number" min="1"
+                                                    step="1" value="1">
+                                            </div>
+                                            <button class="order__aside-remove"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__aside-sum">
+                                    <div class="order__aside-text">
+                                        Общая стоимость заказа:
+                                    </div>
+                                    <div class="order__aside-num">
+                                        <span class="order__aside-number"></span>.
+                                        <span class="order__aside-penny">00</span>
+                                        <span class="order__aside-currency">грн.</span>
+                                    </div>
+                                </div>
+                                <div class="order__checkout">
+                                    <label class="form__checkbox order__checkbox"><input type="checkbox" name="don't-call">
+                                        <span></span>
+                                        Мне можно не звонить для подтверждения заказа
+                                    </label>
+                                    <label class="form__checkbox order__checkbox"><input type="checkbox" name="register-after-order" >
+                                        <span></span>
+                                        Зарегистрировать меня после оформления заказа
+                                    </label>
+                                    <button class="order__btn">Оформить заказ</button>
+                                </div>
+                            </form>
+                            <!-- end aside -->
                         </div>
                     </section>
                 </div>

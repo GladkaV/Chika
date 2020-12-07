@@ -134,12 +134,20 @@ body {
         border-color: $red;
     }
 }
-.form__input:focus + label{
+.form__input:focus + label {
     font-size: 13px;
     line-height: 16px;
     color: #9F9F9F;
     top: -11px;
     left: 0px;
+}
+.form__input.active {
+    border-color: $red;
+    color: $red;
+
+    & + label {
+        color: $red;
+    }
 }
 .form__placeholder {
     font-weight: 500;
@@ -483,6 +491,9 @@ input[type=number]
     }
     li.selected.sel {
         background: #9F9F9F;
+    }
+    li.selected.sel {
+        color: #fff;
     }
 }
 

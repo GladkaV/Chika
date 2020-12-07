@@ -77,10 +77,10 @@ $(function () {
                 dateYear = new Date().getFullYear();
             if (dateDay < 10) {
                 dateDay = '0' + dateDay;
-            } 
+            }
             if (dateMonth < 10) {
                 dateDay = '0' + dateMonth;
-            } 
+            }
 
             let itemInfo = [{
                 name: $(this).find('.form__input').val(),
@@ -263,7 +263,7 @@ $(function () {
     })
 
     // page registration (mask phone)
-    $('#registration-phone').mask("+38 (999) 999 99 99");
+    $('#registration-phone, #order-phone').mask("+38 (999) 999 99 99");
 
     // tabs
     $('.tab').on('click', function (event) {
@@ -369,7 +369,7 @@ $(function () {
 
     function orderSum() {
         let products = $('.order__aside-item'),
-            productSum, totalSum = 0, penny; 
+            productSum, totalSum = 0, penny;
 
         products.each(function () {
             productSum = +($(this).find('.quantity__input').val() * +$(this).find('.quantity__input').data('price'));
@@ -379,7 +379,7 @@ $(function () {
         $('.order__aside-number').text(Math.trunc(totalSum));
 
         penny = Math.trunc((totalSum - Math.trunc(totalSum)) * 100);
-        if(penny === 0) {
+        if (penny === 0) {
             $('.order__aside-penny').text('00');
         } else {
             $('.order__aside-penny').text(penny);
@@ -387,12 +387,43 @@ $(function () {
     }
     orderSum();
 
+    // page order (valid form tabs)
+    $('.new-customer__tabs-btn button').on('click', function () {
+        let tabsInner = $('.new-customer__tabs-inner');
+
+        if ($(this).hasClass('new-customer__tabs-next')) {
+            let inputs = $('.new-customer__tabs-inner input'),
+                inputsLength = inputs.length;
+
+            inputs.each(function (i) {
+                if ($(this).val().length === 0 || ($(this).attr('id') === 'order-phone' && $(this).val().length < 19) || (($(this).attr('id') === 'order-email-1') && ($(this).val().match(/.+?\@.+/g) || []).length !== 1)) {
+                    $(this).addClass('active');
+
+                    setTimeout(() => {
+                        $(this).removeClass('active');
+                    }, 1500);
+
+                    return false;
+                } 
+                else if (i === (inputsLength - 1)) {
+                    $('.order__inner').toggleClass('active');
+                    $(tabsInner).removeClass('active');
+                    $(tabsInner[1]).addClass('active');
+                }
+            })
+            
+        } else {
+            $('.order__inner').toggleClass('active');
+            $(tabsInner).removeClass('active');
+            $(tabsInner[0]).addClass('active');
+        }
+    })
 
 
 
 
 
-    
+
 
 
     // page brands (mixitup)
