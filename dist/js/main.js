@@ -54,8 +54,8 @@ $(function () {
     $('form').on("submit", function (event) {
         // page registration (mask phone)
         if ($(this).hasClass('registration__form')) {
-            let password = $(this).find('#registration-password'),
-                passwordRepeat = $(this).find('#registration-password-repeat');
+            let password = $(this).find('#registration-password');
+            let passwordRepeat = $(this).find('#registration-password-repeat');
 
             if (password.val() !== passwordRepeat.val()) {
                 passwordRepeat.next().addClass('valid');
@@ -72,9 +72,10 @@ $(function () {
 
         // page reviews (popup)
         if ($(this).hasClass('reviews__form')) {
-            let dateDay = new Date().getDate(),
-                dateMonth = new Date().getMonth() + 1,
-                dateYear = new Date().getFullYear();
+            let dateDay = new Date().getDate();
+            let dateMonth = new Date().getMonth() + 1;
+            let dateYear = new Date().getFullYear();
+
             if (dateDay < 10) {
                 dateDay = '0' + dateDay;
             }
@@ -128,12 +129,12 @@ $(function () {
     // page cart (style input)
     $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">–</div></div>').insertAfter('.quantity input');
     $('.quantity').each(function () {
-        let spinner = jQuery(this),
-            input = spinner.find('input[type="number"]'),
-            btnUp = spinner.find('.quantity-up'),
-            btnDown = spinner.find('.quantity-down'),
-            min = input.attr('min'),
-            max = input.attr('max');
+        let spinner = jQuery(this);
+        let input = spinner.find('input[type="number"]');
+        let btnUp = spinner.find('.quantity-up');
+        let btnDown = spinner.find('.quantity-down');
+        let min = input.attr('min');
+        let max = input.attr('max');
 
         btnUp.click(function () {
             let oldValue = parseFloat(input.val());
@@ -161,14 +162,12 @@ $(function () {
 
     // page cart (item sum)
     $('.cart__item .quantity-button').click(function () {
-        let cartItem = $(this).parents('.cart__item'),
-            quantity = $(cartItem).find('.cart__item-input').val(),
-            price = $(cartItem).find('.cart__item-input').data('price'),
-
-            sum = quantity * price,
-
-            integer = Math.trunc(sum),
-            fraction = Math.trunc((sum - Math.trunc(sum)) * 100);
+        let cartItem = $(this).parents('.cart__item');
+        let quantity = $(cartItem).find('.cart__item-input').val();
+        let price = $(cartItem).find('.cart__item-input').data('price');
+        let sum = quantity * price;
+        let integer = Math.trunc(sum);
+        let fraction = Math.trunc((sum - Math.trunc(sum)) * 100);
 
         $(cartItem).find('.cart__item-sum').text(integer + '.');
         if (fraction === 0) {
@@ -189,9 +188,10 @@ $(function () {
 
     // function total sum
     function cartSum() {
-        let products = $('.cart__item-input'),
-            totalSum = 0,
-            totalPenny, productSum;
+        let products = $('.cart__item-input');
+        let totalSum = 0;
+        let totalPenny;
+        let productSum;
 
         if (products.length === 0) {
             $('.cart__total-num').text('0.');
@@ -215,8 +215,9 @@ $(function () {
     cartSum();
 
     // page blog (load more)
-    let blogsitems = $('.blogs__wrap-item'),
-        delta = 180;
+    let blogsitems = $('.blogs__wrap-item');
+    let delta = 180;
+
     $('.load-more').click(function () {
         $(this).find('span').css('transform', `rotate(${delta}deg)`);
         delta += 180;
@@ -272,6 +273,13 @@ $(function () {
         $('.wrapper .tabs').find('.tab').removeClass('active');
         $(this).addClass('active');
         $('#' + id).addClass('active-tab').fadeIn();
+
+        if($(this).parents('.order__inner') && $(this).data('id') === 2) {
+            $('.order__checkout').addClass('hide');
+        } else if ($(this).parents('.order__inner') && $(this).data('id') === 1) {
+            $('.order__checkout').removeClass('hide');
+        }
+
         return false;
     });
 
@@ -285,14 +293,14 @@ $(function () {
     })
 
     // aside (price range slider)
-    let $range = $(".js-range-slider"),
-        $inputFrom = $(".js-input-from"),
-        $inputTo = $(".js-input-to"),
-        instance,
-        min = 0,
-        max = 2500,
-        from = 0,
-        to = 0;
+    let $range = $(".js-range-slider");
+    let $inputFrom = $(".js-input-from");
+    let $inputTo = $(".js-input-to");
+    let instance;
+    let min = 0;
+    let max = 2500;
+    let from = 0;
+    let to = 0;
 
     $range.ionRangeSlider({
         skin: "round",
@@ -363,13 +371,11 @@ $(function () {
     })
 
     // page order (total sum)
-    $('.order__aside-item .quantity-button').click(function () {
-        orderSum();
-    })
-
     function orderSum() {
-        let products = $('.order__aside-item'),
-            productSum, totalSum = 0, penny;
+        let products = $('.order__aside-item');
+        let productSum;
+        let totalSum = 0;
+        let penny;
 
         products.each(function () {
             productSum = +($(this).find('.quantity__input').val() * +$(this).find('.quantity__input').data('price'));
@@ -387,13 +393,18 @@ $(function () {
     }
     orderSum();
 
+    $('.order__aside-item .quantity-button').click(function () {
+        orderSum();
+    })
+
     // page order (valid form tabs)
     $('.new-customer__tabs-btn button').on('click', function () {
         let tabsInner = $('.new-customer__tabs-inner');
+        let tabsText = $('.new-customer__tabs-text');
 
         if ($(this).hasClass('new-customer__tabs-next')) {
-            let inputs = $('.new-customer__tabs-inner input'),
-                inputsLength = inputs.length;
+            let inputs = $('.new-customer__tabs-inner input');
+            let inputsLength = inputs.length;
 
             inputs.each(function (i) {
                 if ($(this).val().length === 0 || ($(this).attr('id') === 'order-phone' && $(this).val().length < 19) || (($(this).attr('id') === 'order-email-1') && ($(this).val().match(/.+?\@.+/g) || []).length !== 1)) {
@@ -409,6 +420,9 @@ $(function () {
                     $('.order__inner').toggleClass('active');
                     $(tabsInner).removeClass('active');
                     $(tabsInner[1]).addClass('active');
+                    $(tabsText).removeClass('active');
+                    $(tabsText[1]).addClass('active');
+
                 }
             })
             
@@ -416,6 +430,8 @@ $(function () {
             $('.order__inner').toggleClass('active');
             $(tabsInner).removeClass('active');
             $(tabsInner[0]).addClass('active');
+            $(tabsText).removeClass('active');
+            $(tabsText[0]).addClass('active');
         }
     })
 
