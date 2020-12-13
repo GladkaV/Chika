@@ -474,6 +474,20 @@ $(function () {
         $(this).toggleClass('active');
     })
 
+    // (product slider)
+    $('.product-slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: true,
+    });
+
+    // page one good (slider product hover)
+    $(".product-slider .product-slider__item").hover(function () {
+        $(this).parents('.product-slider').find('.slick-dots').addClass('imposition');
+    }, function () {
+        $(this).parents('.product-slider').find('.slick-dots').removeClass('imposition');
+    })
 
 
 

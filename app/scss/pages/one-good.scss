@@ -1,3 +1,6 @@
+.good {
+    padding-bottom: 20px;
+}
 .good__box {
     display: flex;
     margin-bottom: 82px;
@@ -321,7 +324,7 @@
 // START GOOD TABS
 .good__tabs {
     max-width: 660px;
-    margin: 0 auto;
+    margin: 0 auto 67px;
     .tabs {
         display: flex;
         justify-content: space-between;
@@ -338,7 +341,7 @@
             line-height: 24px;
             text-transform: uppercase;
             text-decoration: none;
-            color: $dark;
+            // color: $dark;
 
             @media (max-width:550px) {
                 font-size: 18px;
@@ -429,3 +432,102 @@
     }
 }
 // END GOOD TABS
+// START PRODUCT SLIDER
+.product-slider__wrap {
+    margin-bottom: 50px;
+
+    .slick-slide > div {
+        padding: 50px 0;
+    }
+    .slick-arrow {
+        display: none;
+        position: absolute;
+        top: 35.5%;
+        border: none;
+        outline: none;
+        font-size: 0;
+        padding: 0;
+        width: 25px;
+        z-index: 5;
+        height: 25px;
+        background-color: transparent;
+        border-bottom: 3px solid #676767;
+        border-left: 3px solid #676767;
+        transition: all .3s;
+        cursor: pointer;
+    }
+    .slick-next {
+        right: 0;
+        transform: rotate(-135deg);
+        
+        &:hover {
+            transform: rotate(-135deg) scale(1.2);
+        }
+    }
+    .slick-prev {
+        left: 0;
+        transform: rotate(45deg);
+        
+        &:hover {
+            transform: rotate(45deg) scale(1.2);
+        }
+    }
+    .slick-dots {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 34px;
+        left: 0;
+        right: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        &.imposition {
+            z-index: -1;
+        }
+
+        button {
+            font-size: 0;
+            outline: none;
+            cursor: pointer;
+            border: none;
+            width: 26px;
+            height: 11px;
+            background: #DDDDDD;
+            border-radius: 9px;
+            transition: all .3s;
+        }
+
+        li + li {
+            margin-left: 6px;
+        }
+    }
+    li.slick-active button {
+        width: 59px;
+        background: #FFB4B5;
+        border-radius: 9px;
+    }
+}
+.product-slider__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+.product-slider {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-top: -18px;
+
+    &:hover {
+        .slick-arrow {
+            display: block;
+        }
+    }
+}
+.product-slider__item {
+}
+// END PRODUCT SLIDER
