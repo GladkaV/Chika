@@ -480,6 +480,28 @@ $(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 1430,
+                settings: {
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 670,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     // page one good (slider product hover)

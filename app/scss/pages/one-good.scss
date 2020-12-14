@@ -325,6 +325,11 @@
 .good__tabs {
     max-width: 660px;
     margin: 0 auto 67px;
+
+    @media (max-width:450px) {
+        margin-bottom: 17px;
+    }
+
     .tabs {
         display: flex;
         justify-content: space-between;
@@ -436,11 +441,18 @@
 .product-slider__wrap {
     margin-bottom: 50px;
 
+    @media (max-width:450px) {
+        margin-bottom: 77px;
+    }
+
     .slick-slide > div {
         padding: 50px 0;
+
+        @media (max-width:450px) {
+            padding: 0;
+        }
     }
     .slick-arrow {
-        display: none;
         position: absolute;
         top: 35.5%;
         border: none;
@@ -448,7 +460,7 @@
         font-size: 0;
         padding: 0;
         width: 25px;
-        z-index: 5;
+        z-index: 3;
         height: 25px;
         background-color: transparent;
         border-bottom: 3px solid #676767;
@@ -457,7 +469,7 @@
         cursor: pointer;
     }
     .slick-next {
-        right: 0;
+        right: -25px;
         transform: rotate(-135deg);
         
         &:hover {
@@ -465,7 +477,7 @@
         }
     }
     .slick-prev {
-        left: 0;
+        left: -25px;
         transform: rotate(45deg);
         
         &:hover {
@@ -487,6 +499,10 @@
             z-index: -1;
         }
 
+        @media (max-width:450px) {
+            bottom: -22px;
+        }
+
         button {
             font-size: 0;
             outline: none;
@@ -497,6 +513,11 @@
             background: #DDDDDD;
             border-radius: 9px;
             transition: all .3s;
+
+            @media (max-width:450px) {
+                width: 21px;
+                height: 9px;
+            }
         }
 
         li + li {
@@ -507,6 +528,10 @@
         width: 59px;
         background: #FFB4B5;
         border-radius: 9px;
+
+        @media (max-width:450px) {
+            width: 48px;
+        }
     }
 }
 .product-slider__title {
@@ -516,18 +541,30 @@
     text-transform: uppercase;
     text-align: center;
     margin: 0;
+
+    @media (max-width:450px) {
+        font-size: 15px;
+        line-height: 18px;
+    }
 }
 .product-slider {
-    width: calc(100% + 60px);
-    margin-left: -30px;
     margin-top: -18px;
+
+    @media (max-width:450px) {
+        margin-top: 5px;
+    }
 
     &:hover {
         .slick-arrow {
             display: block;
         }
     }
-}
-.product-slider__item {
+    .product__favorites {
+        display: block;
+
+        @media (max-width:550px) {
+            transform: scale(0.7);
+        }
+    }
 }
 // END PRODUCT SLIDER
