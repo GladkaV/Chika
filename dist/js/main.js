@@ -112,21 +112,15 @@ $(function () {
         asNavFor: '.good__slider-for',
         focusOnSelect: true,
         arrows: true,
+        responsive: [
+            {
+                breakpoint: 510,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+        ],
     });
-
-    // // page one good (zoom img)
-    // if (!$.fn.imagezoomsl) {
-    //     $('.msg').show();
-    //     return;
-    // }
-    // else $('.msg').hide();
-
-    // $('.slick-active.slick-current img').imagezoomsl({
-    //     zoomrange: [1, 12],
-    //     zoomstart: 4,
-    //     innerzoom: true,
-    //     magnifierborder: "none"
-    // });  
 
     // page login (remember)
     $('.form__checkbox input').click(function () {
@@ -307,7 +301,7 @@ $(function () {
         $(this).addClass('active');
         $('#' + id).addClass('active-tab').fadeIn();
 
-        if($(this).parents('.order__inner') && $(this).data('id') === 2) {
+        if ($(this).parents('.order__inner') && $(this).data('id') === 2) {
             $('.order__checkout').addClass('hide');
         } else if ($(this).parents('.order__inner') && $(this).data('id') === 1) {
             $('.order__checkout').removeClass('hide');
@@ -448,7 +442,7 @@ $(function () {
                     }, 1500);
 
                     return false;
-                } 
+                }
                 else if (i === (inputsLength - 1)) {
                     $('.order__inner').toggleClass('active');
                     $(tabsInner).removeClass('active');
@@ -458,7 +452,7 @@ $(function () {
 
                 }
             })
-            
+
         } else {
             $('.order__inner').toggleClass('active');
             $(tabsInner).removeClass('active');
@@ -510,6 +504,16 @@ $(function () {
     }, function () {
         $(this).parents('.product-slider').find('.slick-dots').removeClass('imposition');
     })
+
+    $(".product-slider .product").click(function () {
+        $(this).parents('.product-slider').find('.slick-dots').addClass('imposition');
+    });
+    $(document).mouseup(function (e) {
+        if (!$(".product-slider .product").is(e.target) &&
+            $(".product-slider .product").has(e.target).length === 0) {
+                $(this).parents('.product-slider').find('.slick-dots').removeClass('imposition');
+        }
+    });
 
 
 
