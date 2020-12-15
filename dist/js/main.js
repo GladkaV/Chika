@@ -265,8 +265,9 @@ $(function () {
     })
 
     // page wish-list (dislike item)
-    $('.product__favorites').click(function () {
-        $(this).toggleClass('product__favorites--dislike');
+    $('.product__favorites').click(function () { 
+        console.log(1);
+        $(this).toggleClass('product__favorites--like');
     })
 
     // page reviews (rateYo)
@@ -515,7 +516,13 @@ $(function () {
         }
     });
 
-
+    // index
+    $('.main-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+    })
 
 
 

@@ -1,3 +1,5 @@
+@import "../vars";
+
 .favorites {
     padding-bottom: 182px;
 
@@ -83,6 +85,11 @@
         z-index: -1;
         transition: all .3s;
     }
+
+    .item-info {
+        top: 20px;
+        left: 20px;
+    }
 }
 .product__remove {
     background-color: transparent;
@@ -114,7 +121,7 @@
         position: absolute;
         width: 26px;
         height: 3px;
-        // background-color: $dark;
+        background-color: $dark;
 
         @media(max-width: 450px) {
             width: 20px;
@@ -165,7 +172,7 @@
     line-height: 20px;
     display: block;
     outline: none;
-    // color: $dark;
+    color: $dark;
     text-align: center;
     text-transform: uppercase;
     max-width: 258px;
@@ -223,19 +230,20 @@
         display: none;
     }
 }
-.product__favorites.product__favorites--dislike {
-    .product__favorites-true {
-        fill: #fff;
-    }
+.product__favorites.product__favorites--like {
     .product__favorites-false {
-        fill: #A8A8A8;
+        fill: $red;
+    }
+    .product__favorites-true {
+        fill: $red;
     }
 }
 .product__favorites-true {
-    // fill: $red;
+    fill: transparent;
 }
 .product__favorites-false {
-    fill: transparent;
+    
+    fill: #A8A8A8;
 }
 .product__btn {
     width: calc(100% - 40px);
@@ -246,7 +254,7 @@
     bottom: -34px;
     left: 50%;
     transform: translateX(-50%);
-    // background: $red;
+    background: $red;
     border-radius: 5px;
     font-weight: bold;
     font-size: 16px;

@@ -168,10 +168,14 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 45px;
+    row-gap: 42px;
 
     @media (max-width: 850px){
         width: calc(100% + 20px);
         margin-left: -10px;
+    }
+    @media (max-width: 450px){
+        row-gap: 5px;
     }
 }
 .one-brand__item {
@@ -180,6 +184,9 @@
 
     @media (max-width: 1050px){
         width: 50%;
+    }
+    .product__favorites {
+        display: block;
     }
 }
 .one-brand__description {

@@ -1,3 +1,5 @@
+@import "../vars";
+
 .cart__inner {
     padding: 59px 0 150px;
     max-width: 1114px;
@@ -182,7 +184,7 @@
     &:hover {
         &::before,
         &::after {
-            // background-color: $red;
+            background-color: $red;
         }
     }
 

@@ -82,6 +82,8 @@
         display: block;
     }
 }
+@import "../vars";
+
 .contacts__info-phone {
     margin-bottom: 48px;
 
@@ -106,7 +108,7 @@
     font-size: 15px;
     line-height: 27px;
     text-decoration: none;
-    // color: $dark;
+    color: $dark;
     margin-bottom: 42px;
     display: inline-block;
 

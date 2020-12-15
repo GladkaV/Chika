@@ -1,3 +1,5 @@
+@import "vars";
+
 html{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -28,16 +30,8 @@ body {
     max-width: 1370px;
 }
 
-.main {
-    padding-top: 14px;
-
-    @media(max-width:480px) {
-        padding-top: 17px;
-    }
-}
-
 .bread-crumbs {
-    padding: 0;
+    padding: 14px 0 0;
     margin: 0 0 22px;
     list-style: none;
     display: flex;
@@ -47,6 +41,7 @@ body {
 
     @media(max-width:480px) {
         margin-bottom: 7px;
+        padding-top: 17px;
     }
 
     li:not(:last-child) {
@@ -175,7 +170,6 @@ body {
     right: 11px;
     top: 6px;
     z-index: -1;
-    cursor: pointer;
     background-color: transparent;
     width: 21px;
     height: 21px;
@@ -487,7 +481,7 @@ input[type=number]
 
     li:hover {
         background: #E3E2E2;
-        // color: $dark;
+        color: $dark;
     }
     li.selected.sel {
         background: #9F9F9F;
@@ -549,7 +543,7 @@ input[type=number]
         position: absolute;
         width: 26px;
         height: 3px;
-        // background-color: $dark;
+        background-color: $dark;
         left: 18%;
         top: 10px;
     }
@@ -566,7 +560,7 @@ input[type=number]
     font-size: 20px;
     line-height: 22px;
     padding: 0 50px 16px 18px;
-    // border-bottom: 3px solid $red;
+    border-bottom: 3px solid $red;
 }
 .filter__list {
     margin: 0;
@@ -606,7 +600,7 @@ input[type=number]
         top: 48%;
         height: 1px;
         width: 19px;
-        // background-color: $dark;
+        background-color: $dark;
         transition: all .3s;
     }
 }
@@ -771,10 +765,10 @@ input[type=number]
     background-color: #E1E1E1;
 }
 .irs--round .irs-bar {
-    // background-color: $red;
+    background-color: $red;
 }
 .irs--round .irs-handle {
-    // border: 3px solid $red;
+    border: 3px solid $red;
     width: 23px;
     height: 23px;
     cursor: pointer;
@@ -783,4 +777,41 @@ input[type=number]
 // slick slide 
 .slick-slide {
     outline: none;
+}
+
+.slick-dots {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+    display: flex;
+
+    button {
+        font-size: 0;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        width: 26px;
+        height: 11px;
+        background: #DDDDDD;
+        border-radius: 9px;
+        transition: all .3s;
+        @media (max-width:450px) {
+            width: 21px;
+            height: 9px;
+        }
+    }
+
+    li + li {
+        margin-left: 6px;
+    }
+}
+li.slick-active button {
+    width: 59px;
+    background: #FFB4B5;
+    border-radius: 9px;
+    
+    @media (max-width:450px) {
+        width: 48px;
+    }
 }

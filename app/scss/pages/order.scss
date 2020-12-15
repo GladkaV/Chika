@@ -1,3 +1,5 @@
+@import "../vars";
+
 .order {
     padding-bottom: 150px;
 
@@ -22,8 +24,8 @@
             border-color:  #BEBEBE;
         }
         &::after {
-            // color: $red;
-            // border-color: $red;
+            color: $red;
+            border-color: $red;
         }
     }
     button.new-customer__tabs-next {
@@ -92,8 +94,8 @@
         }
 
         &.active {
-            // color: $dark;
-            // border-bottom-color: $red;
+            color: $dark;
+            border-bottom-color: $red;
         }
     }
     .tab_content {
@@ -270,7 +272,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-    // color: $dark;
+    color: $dark;
     max-width: 300px;
     display: block;
     padding-left: 30px;
@@ -282,7 +284,7 @@
     line-height: 27px;
     text-align: center;
     color: #FFFFFF;
-    // background-color: $red;
+    background-color: $red;
     outline: none;
     padding: 16px 0;
     margin-top: 9px;
@@ -409,8 +411,8 @@
 
         &.active {
             &::before {
-                // color: $red;
-                // border-color: $red;
+                color: $red;
+                border-color: $red;
             }
         }
     
@@ -464,8 +466,8 @@
     }
     &::before {
         left: -35px;
-        // color: $red;
-        // border-color: $red;
+        color: $red;
+        border-color: $red;
     }
     &::after {
         right: -35px;

@@ -96,7 +96,7 @@ gulp.task('fonts', function () {
 })
 
 gulp.task('watch', function () {
-    gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'))
+    gulp.watch('app/**/**/*.scss', gulp.parallel('scss'))
     gulp.watch('app/**/**/*.html', gulp.parallel('html', 'fileinclude'))
     gulp.watch('app/**/**/*.js', gulp.parallel('script'))
     gulp.watch("app/img/**/*.{png,jpg,svg,webp}", gulp.parallel('img'));

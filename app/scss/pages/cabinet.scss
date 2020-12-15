@@ -1,3 +1,5 @@
+@import "../vars";
+
 .cabinet {
     padding-bottom: 150px;
 
@@ -46,8 +48,8 @@
         } 
     }
     .tab.active {
-        // color: $dark;
-        // border-bottom: 3px solid $red;
+        color: $dark;
+        border-bottom: 3px solid $red;
 
         @media (max-width: 450px) {
             border-width: 2px;
@@ -273,10 +275,10 @@
     }
 
     &:hover {
-        // color: $red;
+        color: $red;
 
         svg {
-            // fill: $red;
+            fill: $red;
         }
     }
 }
@@ -320,7 +322,7 @@
 }
 .cabinet__bonus {
     max-width: 316px;
-    // border: 3px solid $dark;
+    border: 3px solid $dark;
     padding-bottom: 10px;
 }
 .cabinet__bonus-title {
@@ -328,7 +330,7 @@
     font-size: 22px;
     line-height: 27px;
     text-transform: uppercase;
-    // background-color: $dark;
+    background-color: $dark;
     text-align: center;
     color: #fff;
     padding: 5px 10px 6px;
@@ -377,7 +379,7 @@
     line-height: 23px;
     letter-spacing: 0.3px;
     text-decoration-line: underline;
-    // color: $red;
+    color: $red;
     padding-left: 29px;
 
     @media (max-width: 450px) {

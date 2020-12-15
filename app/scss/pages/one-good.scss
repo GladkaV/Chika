@@ -1,3 +1,5 @@
+@import '../vars';
+
 .good {
     padding-bottom: 20px;
 }
@@ -51,7 +53,7 @@
         }
 
         &:hover {
-            // border-color: $red;
+            border-color: $red;
         }
     }
     .slick-prev {
@@ -71,7 +73,7 @@
         }
     }
 }
-.good__slider-info {
+.item-info {
     z-index: 4;
     position: absolute;
     display: flex;
@@ -97,16 +99,16 @@
 }
 //  //////////////////////////////////
 .text-new {
-    // border-color: $green;
-    // color: $green;
+    border-color: $green;
+    color: $green;
 }
 .text-sale {
-    // border-color: $orange;
-    // color: $orange;
+    border-color: $orange;
+    color: $orange;
 }
 .text-bestseller {
-    // border-color: $pink;
-    // color: $pink
+    border-color: $pink;
+    color: $pink
 }
 //  ////////////////////////////////////
 .good__slider-for {
@@ -132,6 +134,7 @@
 }
 .good__slider-item {
     height: 380px;
+    position: relative;
 
     @media (max-width:450px) {
         height: 300px;
@@ -280,8 +283,8 @@
         display: none;
     }
     input:checked + label .good__volume{
-        // color: $red;
-        // border-color: $red;
+        color: $red;
+        border-color: $red;
     }
     input:checked + label .good__price {
         display: block;
@@ -301,7 +304,7 @@
     position: absolute;
     top: 24px;
     left: 39px;
-    // color: $red;
+    color: $red;
     font-weight: bold;
     font-size: 33px;
     line-height: 40px;
@@ -364,29 +367,21 @@
     background-color: transparent;
 
     &.active {
-        // color: $red;
+        color: $red;
 
         svg {
-            // fill: $red;
+            fill: $red;
         }
     }
 
     svg {
         margin-right: 10px;
-        // fill: $dark;
+        fill: $dark;
         transition: all .3s;
-    }
-
-    &:hover {
-        // color: $red;
-
-        svg {
-            // fill: $red;
-        }
     }
 }
 .good__btns-buy {
-    // background: $red;
+    background: $red;
     border-radius: 5px;
     height: 48px;
     font-weight: bold;
@@ -425,11 +420,11 @@
     border: 2px solid #A8A8A8;
     border-radius: 5px;
     padding: 11px 10px;
-    // color: $dark;
+    color: $dark;
     transition: all .3s;
 
     &:hover {
-        // border-color: $red;
+        border-color: $red;
     }
 }
 // START GOOD TABS
@@ -457,7 +452,7 @@
             line-height: 24px;
             text-transform: uppercase;
             text-decoration: none;
-            // color: $dark;
+            color: $dark;
 
             @media (max-width:550px) {
                 font-size: 18px;
@@ -578,6 +573,7 @@
         border-left: 3px solid #676767;
         transition: all .3s;
         cursor: pointer;
+        display: none !important;
     }
     .slick-next {
         right: -25px;
@@ -596,14 +592,9 @@
         }
     }
     .slick-dots {
-        margin: 0;
-        padding: 0;
-        position: absolute;
         bottom: 34px;
         left: 0;
         right: 0;
-        list-style: none;
-        display: flex;
         justify-content: center;
 
         &.imposition {
@@ -612,36 +603,6 @@
 
         @media (max-width:450px) {
             bottom: -22px;
-        }
-
-        button {
-            font-size: 0;
-            outline: none;
-            cursor: pointer;
-            border: none;
-            width: 26px;
-            height: 11px;
-            background: #DDDDDD;
-            border-radius: 9px;
-            transition: all .3s;
-
-            @media (max-width:450px) {
-                width: 21px;
-                height: 9px;
-            }
-        }
-
-        li + li {
-            margin-left: 6px;
-        }
-    }
-    li.slick-active button {
-        width: 59px;
-        background: #FFB4B5;
-        border-radius: 9px;
-
-        @media (max-width:450px) {
-            width: 48px;
         }
     }
 }
@@ -667,7 +628,7 @@
 
     &:hover {
         .slick-arrow {
-            display: block;
+            display: block !important;
         }
     }
     .product__favorites {
