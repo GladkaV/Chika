@@ -8,7 +8,7 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
     fileinclude = require('gulp-file-include'),
-    imagemin = require('gulp-imagemin');;
+    imagemin = require('gulp-imagemin');
 
 gulp.task('clean', async function(){
     del.sync('dist');
@@ -24,7 +24,7 @@ gulp.task('fileinclude', function () {
 });
 
 gulp.task('scss', function () {
-    return gulp.src('app/scss/**/*.scss')
+    return gulp.src('app/scss/style.scss')
         .pipe(sass({ outputStyle: 'compressed' }))  //expanded
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 8 versions']

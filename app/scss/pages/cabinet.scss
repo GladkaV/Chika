@@ -6,63 +6,53 @@
     @media (max-width: 450px) {
         padding-bottom: 134px;
     } 
+}
 
-    .tabs {
-        display: flex;
-        justify-content: space-between;
-        max-width: 780px;
+.cabinet .tabs {
+    max-width: 780px;
 
-        @media (max-width: 1050px) {
-            max-width: 850px;
-            padding-right: 70px;
-        }  
-        @media (max-width: 850px) {
-            flex-direction: column;
-            padding-right: 0;
-        }       
-    }
-    .tab,
-    .cabinet__link {
-        color: #676767;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
-        text-decoration: none;
-        cursor: pointer;
+    @media (max-width: 1050px) {
+        max-width: 850px;
+        padding-right: 70px;
+    }  
+    @media (max-width: 850px) {
+        flex-direction: column;
+        padding-right: 0;
+    }       
+}
 
-        @media (max-width: 850px) {
-            margin-bottom: 10px;
-        } 
-        @media (max-width: 450px) {
-            font-size: 16px;
-            line-height: 20px;
-        } 
-    }
-    .tab {
-        @media (max-width: 850px) {
-            align-self: self-start;
-            border-bottom: 3px solid transparent;
-        }
-        @media (max-width: 450px) {
-            border-width: 2px;
-        } 
-    }
-    .tab.active {
-        color: $dark;
-        border-bottom: 3px solid $red;
+.cabinet .tab,
+.cabinet__link {
+    color: #676767;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    
+    @media (max-width: 850px) {
+        margin-bottom: 10px;
+    } 
+    @media (max-width: 450px) {
+        font-size: 16px;
+        line-height: 20px;
+    } 
+}
 
-        @media (max-width: 450px) {
-            border-width: 2px;
-        } 
-    }
-    .form__input[value] + label{
-        font-size: 13px;
-        line-height: 16px;
-        color: #9F9F9F;
-        top: -11px;
-        left: 0px;
+.cabinet .tab {
+    @media (max-width: 850px) {
+        align-self: self-start;
     }
 }
+
+.cabinet .form__input[value] + label{
+    font-size: 13px;
+    line-height: 16px;
+    color: #9F9F9F;
+    top: -11px;
+    left: 0px;
+}
+
 .cabinet__inner {
     margin-top: 23px;
     border-top: 1px solid #BEBEBE;
@@ -78,6 +68,7 @@
         padding-top: 14px;
     } 
 }
+
 .cabinet__tabs {
     width: 100%;
     max-width: 845px;
@@ -93,9 +84,11 @@
         padding-right: 0;
     } 
 }
+
 .cabinet__form {
     max-width: 780px;
 }
+
 .cabinet__form-inner {
     display: flex;
     flex-wrap: wrap;
@@ -112,38 +105,29 @@
         padding-top: 33px;
         margin-bottom: 0;
     } 
-
-    &>div {
-        width: 47%;
-        margin: 0 48px 34px 0;
-
-        @media (max-width: 750px) {
-            width: calc(47% - 10px);
-        }
-        @media (max-width: 600px) {
-            margin-right: 0;
-            width: 100%;
-            max-width: 400px;
-        }
-        @media (max-width: 450px) {
-            margin-bottom: 25px;
-        } 
-    }
 }
-.cabinet__btn {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    background-color: transparent;
-    border: 2px solid #EB0002;
-    border-radius: 5px;
-    padding: 11px 35px;
-    cursor: pointer;
 
+.cabinet__form-inner > div {
+    width: 47%;
+    margin: 0 48px 34px 0;
+
+    @media (max-width: 750px) {
+        width: calc(47% - 10px);
+    }
+    @media (max-width: 600px) {
+        margin-right: 0;
+        width: 100%;
+        max-width: 400px;
+    }
     @media (max-width: 450px) {
-        
+        margin-bottom: 25px;
     } 
 }
+
+.cabinet__btn {
+    padding: 11px 35px;
+}
+
 .orders {
     max-width: 845px;
     width: 100%;
@@ -153,6 +137,7 @@
         padding-top: 9px;
     } 
 }
+
 .orders__item {
     display: flex;
     justify-content: space-between;
@@ -172,21 +157,8 @@
         row-gap: 0;
         padding-top: 20px;
     }
-
-    &>div,
-    &>a {
-        @media (max-width: 700px) {
-            width: 50%;
-        } 
-
-        &.orders__item-sum,
-        &.orders__item-link {
-            @media (max-width: 450px) {
-                width: auto;
-            } 
-        }
-    }
 }
+
 .orders__item-info {
     align-self: flex-start;
     padding: 31px 0 5px;
@@ -197,21 +169,21 @@
         padding-top: 0;
     } 
 }
+
 .orders__item-num {
     font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
     margin-bottom: 5px; 
 }
+
 .orders__item-status {
     font-weight: 500;
-    font-size: 14px;
     line-height: 17px;
     color: #BEBEBE;
 }
+
 .orders__item-date {
     font-size: 16px;
-    line-height: 20px;
 
     @media (max-width: 700px) {
         text-align: right;
@@ -220,19 +192,7 @@
         align-self: flex-start;
     } 
 }
-.orders__item-sum {
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 1.33333px;
-    display: flex;
-    align-items: flex-end;
-}
-.orders__item-price {
-    font-size: 18px;
-}
-.orders__item-currency {
-    font-weight: 600;
-}
+
 .orders__item-link {
     font-size: 12px;
     line-height: 14px;
@@ -253,27 +213,6 @@
         white-space: nowrap;
     }
 
-    svg {
-        fill: #505759;
-        transition: all .2s;
-        margin-bottom: 1px;
-
-        @media (max-width: 450px) {
-            margin-left: -16px;
-            margin-bottom: 4px;
-        }
-    }
-    span {
-        margin-left: 12px;
-
-        @media (max-width: 450px) {
-            display: inline-block;
-            width: 14px;
-            height: 8px;
-            overflow: hidden; 
-        }
-    }
-
     &:hover {
         color: $red;
 
@@ -282,6 +221,29 @@
         }
     }
 }
+
+.orders__item-link span {
+    margin-left: 12px;
+
+    @media (max-width: 450px) {
+        display: inline-block;
+        width: 14px;
+        height: 8px;
+        overflow: hidden; 
+    }
+}
+
+.orders__item-link svg {
+    fill: #505759;
+    transition: all .2s;
+    margin-bottom: 1px;
+    
+    @media (max-width: 450px) {
+        margin-left: -16px;
+        margin-bottom: 4px;
+    }
+}
+
 .cabinet__aside {
     flex-grow: 2;
     max-width: 430px;
@@ -294,7 +256,8 @@
         padding-top: 80px;
     } 
 }
-.cabinet__aside-btn {
+
+.btn-out {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
@@ -305,6 +268,7 @@
     display: block;
     margin: 0 7px 64px auto;
     padding: 0;
+    outline: none;
     cursor: pointer;
 
     @media (max-width: 1050px) {
@@ -314,17 +278,18 @@
         margin-right: 0;
     }
     @media (max-width: 450px) {
-        font-size: 14px;
         line-height: 17px;  
         right: 2px;
         top: 14px;
     } 
 }
+
 .cabinet__bonus {
     max-width: 316px;
     border: 3px solid $dark;
     padding-bottom: 10px;
 }
+
 .cabinet__bonus-title {
     font-weight: 300;
     font-size: 22px;
@@ -335,6 +300,7 @@
     color: #fff;
     padding: 5px 10px 6px;
 }
+
 .cabinet__bonus-num {
     font-size: 28px;
     line-height: 34px;
@@ -343,28 +309,28 @@
     text-align: center;
     padding-top: 15px;
     margin-bottom: 10px;
-
-    span {
-        position: relative;
-        padding-left: 30px;
-
-        &::before {
-            content: '';
-            width: 20px;
-            height: 27px;
-            position: absolute;
-            left: -1px;
-            top: 3px;
-            background-image: url(../../img/bonus.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-    }
 }
+
+.cabinet__bonus-num span {
+    position: relative;
+    padding-left: 30px;
+}
+
+.cabinet__bonus-num span::before {
+    content: '';
+    width: 20px;
+    height: 27px;
+    position: absolute;
+    left: -1px;
+    top: 3px;
+    background-image: url(../../img/bonus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .cabinet__bonus-text {
     font-weight: 300;
-    font-size: 14px;
     line-height: 23px;
     letter-spacing: 0.3px;
     padding: 0 29px;
@@ -373,9 +339,9 @@
         padding: 0 10px 0 20px;
     } 
 }
+
 .cabinet__bonus-link {
     font-weight: 300;
-    font-size: 14px;
     line-height: 23px;
     letter-spacing: 0.3px;
     text-decoration-line: underline;

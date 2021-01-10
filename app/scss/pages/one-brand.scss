@@ -7,16 +7,18 @@
     @media (max-width: 450px){
         margin-bottom: 58px;
     }
-
-    .title {
-        margin-bottom: 8px;
-    }
-    .load-more {
-        display: flex;
-        max-width: 286px;
-        margin: 0 auto 80px;
-    }
 }
+
+.one-brand .title {
+    margin-bottom: 8px;
+}
+
+.one-brand .load-more {
+    display: flex;
+    max-width: 286px;
+    margin: 0 auto 80px;
+}
+
 .one-brand__inner {
     flex-grow: 2;
     margin-left: 50px;
@@ -29,13 +31,14 @@
         margin-left: 0px;
     }
 }
+
 .one-brand__wrap-filter {
     position: relative;
 }
+
 .one-brand__bnts {
     display: none;
     font-weight: 600;
-    font-size: 14px;
     line-height: 17px;
 
     @media (max-width: 850px){
@@ -47,6 +50,7 @@
         margin-top: 30px;
     }
 }
+
 .one-brand__bnt-filtr,
 .one-brand__bnt-sort {
     padding: 0;
@@ -58,40 +62,37 @@
     width: 50%;
     height: 35px;
     cursor: pointer;
+}
 
-    span {
-        position: relative;
-        padding-left: 20px;
+.one-brand__bnt-filtr span,
+.one-brand__bnt-sort span {
+    position: relative;
+    padding-left: 20px;
 
-        &::before {
-            content: "";
-            position: absolute;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 14px;
-            height: 14px;
-            left: 0px;
-        }
+    &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 14px;
+        height: 14px;
+        left: 0px;
     }
 }
-.one-brand__bnt-filtr {
-    span {
-        &::before {
-            background-image: url(../../img/filtr.svg);
-        }
-    }
+
+.one-brand__bnt-filtr span::before {
+    background-image: url(../../img/filtr.svg);
 }
+
 .one-brand__bnt-sort {
     border-left: 1px solid #E1E1E1;
-
-    span {
-        &::before {
-            background-image: url(../../img/sort.svg);
-        }
-    }
-    
 }
+
+.one-brand__bnt-sort span::before {
+    background-image: url(../../img/sort.svg);
+}
+
 .one-brand__wrap-filter {
     border-top: 1px solid #E1E1E1;
 
@@ -100,18 +101,11 @@
         margin-top: 50px;
     }
 }
+
 .one-brand__filter {
     padding-top: 15px;
     display: flex;
     margin-bottom: 36px;
-
-    span {
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 18px;
-        color: #505759;
-        margin-right: 5px;
-    }
 
     @media (max-width: 850px){
         flex-direction: column;
@@ -129,17 +123,28 @@
         &>div {
             padding: 20px 0 0;
         }
-        span {
-            display: inline-block;
-        }
     }
      @media (max-width: 450px) {
          top: 65px;
      }
 }
+
+.one-brand__filter span {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #505759;
+    margin-right: 5px;
+
+    @media (max-width: 850px){
+        display: inline-block;
+    }
+}
+
 .one-brand__filter-sort {
     margin-right: 6.5%;
 }
+
 .one-brand__filter-num {
     position: absolute;
     right: 0;
@@ -157,13 +162,14 @@
     @media (max-width: 450px){
         top: -33px;
     }
-
-    span {
-        font-size: 16px;
-        line-height: 20px;
-        // color: $dark;
-    }
 }
+
+.one-brand__filter-num span {
+    font-size: 16px;
+    line-height: 20px;
+    color: $dark;
+}
+
 .one-brand__items {
     display: flex;
     flex-wrap: wrap;
@@ -178,6 +184,7 @@
         row-gap: 5px;
     }
 }
+
 .one-brand__item {
     width: 33.3333%;
     padding: 0 10px;
@@ -185,115 +192,8 @@
     @media (max-width: 1050px){
         width: 50%;
     }
-    .product__favorites {
-        display: block;
-    }
 }
-.one-brand__description {
-    background: #F3F2F2;
-    color: #505759;
-    padding: 56px 0 32px 2.4%;
 
-    @media (max-width: 450px){
-        padding: 20px 0 35px 13px;
-    }
-}
-.one-brand__description-inner {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-
-    @media (max-width: 600px){
-        display: block;
-    }
-    @media (max-width: 450px){
-        overflow-y: scroll;
-        padding-right: 10px;
-        margin-right: 15px;
-        max-height: 242px;
-
-        &::-webkit-scrollbar {
-            width: 6px;
-            background: #E3E2E2;
-            border-radius: 9px;
-        }
-        &::-webkit-scrollbar-thumb {
-            width: 6px;
-            background: #9F9F9F;
-            border-radius: 9px;
-        }
-    }
-}
-.one-brand__figure {
-    margin: 0;
-    font-weight: normal;
-    max-width: 224px;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-right: 79px;
-
-    @media (max-width: 850px){
-        margin-right: 30px;
-    }
-    @media (max-width: 600px){
-        margin: 0 auto 30px;
-    }
-}
-.one-brand__description-img {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.14);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    min-height: 145px;
-    padding: 0 10px;
-    margin: 7px 0 10px 0;
-}
-.one-brand__description-title {
-    margin: 0 0 19px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-
-    @media (max-width: 450px){
-        font-size: 15px;
-        line-height: 18px;
-        margin-bottom: 34px;
-    }
-}
-.one-brand__description-text {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
-    height: 114px;
-    overflow-y: scroll;
-    max-width: 994px;
-    padding-right: 79px;
-
-    @media (max-width: 600px){
-        padding-right: 20px;
-        margin-right: 19px;
-    }
-    @media (max-width: 450px){
-        overflow-y: visible;
-        padding-right: 0;
-        margin-right: 0;
-    }
-    
-    p {
-        margin: 0 0 10px;
-    }
-
-    &::-webkit-scrollbar {
-        width: 6px;
-        background: #E3E2E2;
-        border-radius: 9px;
-    }
-    &::-webkit-scrollbar-thumb {
-        width: 6px;
-        background: #9F9F9F;
-        border-radius: 9px;
-    }
+.one-brand__item .product__favorites {
+    display: block;
 }

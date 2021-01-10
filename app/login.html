@@ -29,22 +29,23 @@
                             Вход
                         </h1>
                         <form class="form">
-                            <div class="form__wrap-input login__email">
+                            <div class="form__wrap-input">
                                 <input class="form__input" type="email" name="login-email" id="login-email" required>
                                 <label class="form__placeholder" for="login-email">E-mail <span>*</span></label>
                             </div>
-                            <div class="form__wrap-input login__password">
+                            <div class="form__wrap-input">
                                 <input class="form__input" type="password" name="login-password" id="login-password"
                                     required>
                                 <label class="form__placeholder" for="login-password">Пароль <span>*</span></label>
                                 <label class="form__password-checkbox"><input type="checkbox"></label>
                             </div>
 
-                            <label class="form__checkbox login__remember"><input type="checkbox" name="remember-me"><span></span>
+                            <label class="form__checkbox login__remember"><input type="checkbox"
+                                    name="remember-me"><span></span>
                                 Запомнить меня</label>
-                            <a class="login__forget-password" href="#">Забыли пароль?</a>
+                            <a class="form__forget-password" href="#">Забыли пароль?</a>
 
-                            <button class="form__log-in" type="submit">Войти</button>
+                            <button class="form__log-in btn-border" type="submit">Войти</button>
                             <a class="login__log-up" href="#">Регистрация</a>
                         </form>
                     </section>
@@ -55,6 +56,11 @@
         @@include("./blocks/footer/_footer.html")
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>

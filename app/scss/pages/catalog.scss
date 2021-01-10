@@ -11,6 +11,7 @@
         margin-left: -15px;
     }
 }
+
 .catalog-img__text {
     font-weight: 400;
     font-size: 26px;
@@ -23,25 +24,14 @@
     @media(max-width: 480px) {
         margin-right: auto;
     }
-    
-    span {
-        display: block;
-        font-weight: 700;
-        padding-top: 6px;
-    }
 }
+
+.catalog-img__text span {
+    display: block;
+    font-weight: 700;
+    padding-top: 6px;
+}
+
 .catalog {
     margin-bottom: 97px;
-}
-.catalog-description {
-    padding-bottom: 70px;
-
-    .one-brand__description-title {
-        margin-bottom: 40px;
-    }
-    .one-brand__description-text {
-        max-width: 1340px;
-        margin-right: 45px;
-        height: 80px;
-    }
 }

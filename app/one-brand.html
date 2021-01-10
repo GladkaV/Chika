@@ -112,7 +112,7 @@
                                 </div>
                                 <button class="filter__btn"></button>
                                 <form>
-                                    <ul class="filter__list-checkbox filter__list-scroll">
+                                    <ul class="filter__list-checkbox">
                                         <li>
                                             <label for="filter-antibacterial">
                                                 <input type="checkbox" name="antibacterial" id="filter-antibacterial">
@@ -178,30 +178,29 @@
                                             </label>
                                         </li>
                                         <li>
-                                            <label for="filter-antibacterial">
-                                                <input type="checkbox" name="antibacterial" id="filter-antibacterial">
+                                            <label for="filter-antibacterial1">
+                                                <input type="checkbox" name="antibacterial" id="filter-antibacterial1">
                                                 <span class=filter__checkbox></span>
                                                 Антибактериальное
                                             </label>
                                         </li>
                                         <li>
-                                            <label for="filter-anti-aging">
-                                                <input type="checkbox" name="anti-aging" id="filter-anti-aging">
+                                            <label for="filter-anti-aging1">
+                                                <input type="checkbox" name="anti-aging" id="filter-anti-aging1">
                                                 <span class=filter__checkbox></span>
                                                 Антивозрастной
                                             </label>
                                         </li>
                                         <li>
-                                            <label for="filter-antioxidant-action">
-                                                <input type="checkbox" name="antioxidant-action"
-                                                    id="filter-antioxidant-action">
+                                            <label for="filter-antioxidant-action1">
+                                                <input type="checkbox" name="antioxidant-action" id="filter-antioxidant-action1">
                                                 <span class=filter__checkbox></span>
                                                 Антиоксидантное действие
                                             </label>
                                         </li>
                                         <li>
-                                            <label for="filter-ripple">
-                                                <input type="checkbox" name="ripple" id="filter-ripple">
+                                            <label for="filter-ripple1">
+                                                <input type="checkbox" name="ripple" id="filter-ripple1">
                                                 <span class=filter__checkbox></span>
                                                 Ripple
                                             </label>
@@ -742,19 +741,19 @@
                     </div>
 
                 </div>
-                <div class="one-brand__description">
-                    <div class="one-brand__description-inner">
-                        <figure class="one-brand__figure">
-                            <div class="one-brand__description-img">
+                <div class="description">
+                    <div class="description__inner">
+                        <figure class="description__figure">
+                            <div class="description__img">
                                 <img src="img/one-brand/item-1.png" alt="Duft&Doft">
                             </div>
                             <figcaption>Duft&Doft</figcaption>
                         </figure>
-                        <div class="one-brand__description-info">
-                            <h5 class="one-brand__description-title">
+                        <div class="description__info">
+                            <h5 class="description__title">
                                 Косметика Duft&Doft – насладись ароматом красоты
                             </h5>
-                            <div class="one-brand__description-text">
+                            <div class="description__text">
                                 <p>
                                     Косметический бренд Duft&Doft появился на бьюти-рынке в 2013 году и сразу же заявил
                                     о
@@ -797,10 +796,11 @@
         @@include("./blocks/footer/_footer.html")
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-
+    
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>

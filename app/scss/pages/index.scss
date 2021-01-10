@@ -1,47 +1,116 @@
 .main-slider {
     max-width: 1440px;
     margin: 0 auto 47px;
-    
-    .slick-arrow {
-        display: none !important;
-    }
-    .slick-dots {
-        bottom: 45px;
-        left: 50px;
+
+    @media (max-width:700px) {
+        margin-bottom: 15px;
     }
 }
+
+.main-slider .slick-arrow {
+    display: none !important;
+}
+
+.main-slider .slick-dots {
+    bottom: 45px;
+    left: 50px;
+
+    @media (max-width:700px) {
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 .main-slider__item {
     min-height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media (max-width:1000px) {
+        min-height: 400px;
+    }
+    @media (max-width:700px) {
+        min-height: 300px;
+    }
+    @media (max-width:500px) {
+        min-height: 180px;
+    }
 }
 
 .advantages {
     padding: 0;
-    margin: 0;
+    margin: 0 0 95px;
     list-style: none;
     display: flex;
     justify-content: space-between;
     font-weight: normal;
-    font-size: 14px;
     line-height: 17px;
     color: #676767;
-    
-    li {
-        display: flex;
-        align-items: center;
-        max-width: 290px;
+
+    @media (max-width:1150px) {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    @media (max-width:850px) {
+        justify-content: center;
+    }
+}
+
+.advantages li {
+    display: flex;
+    align-items: center;
+    max-width: 290px;
+    margin-left: 15px;
+
+    @media (max-width:1150px) {
+        max-width: 36%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    @media (max-width:850px) {
+        max-width: 47%;
+        width: 100%;
+    }
+    @media (max-width:700px) {
+        flex-direction: column;
+        max-width: 260px;
+        padding: 0 5px;
+        margin-left: 0px;
+    }
+    @media (max-width:580px) {
+        font-size: 9px;
+        line-height: 136.2%;
+        max-width: 50%;
+        text-align: center;
     }
 }
 
 .advantages__img {
-        display: inline-block;
-        max-width: 95px;
-        min-height: 36px;
-        margin-right: 16px;
+    display: inline-block;
+    max-width: 95px;
+    min-height: 36px;
+    margin-right: 16px;
 
-        img {
-            object-fit: contain;
-        }
+    @media (max-width:700px) {
+        min-height: 63px;
+        display: flex;
     }
+    @media (max-width:580px) {
+        max-width: 46px;
+        min-height: 43px;
+    }
+}
+
+.advantages__img img {
+    object-fit: contain;
+
+    @media (max-width:580px) {
+        max-width: 100%;
+    }
+}
+
+.main .product-slider__wrap {
+    margin-bottom: 76px;
+}

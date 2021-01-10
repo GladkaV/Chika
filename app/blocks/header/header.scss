@@ -57,7 +57,6 @@
     a {
         text-decoration: none;
         font-weight: 500;
-        font-size: 14px;
         line-height: 17px;
     }
 }
@@ -288,7 +287,6 @@
 .header__content-connection {
     padding-bottom: 2px;
     margin-right: auto;
-    color: $dark;
 
     @media (max-width:1050px) {
         position: absolute;
@@ -309,7 +307,6 @@
 }
 .header__content-text {
     font-weight: 500;
-    font-size: 14px;
     line-height: 17px;
     margin-bottom: 6px;
 }
@@ -525,7 +522,6 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 23px;
-        color: $dark;
         transition: all .1s;
         border-bottom: 1px solid $light_gray;
         white-space: nowrap;
@@ -795,8 +791,6 @@
     max-width: 311px;
     margin: 0 auto;
     font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
     letter-spacing: 0.3px;
     padding: 42px 10px 0;
     margin-bottom: 20px;

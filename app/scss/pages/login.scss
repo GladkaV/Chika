@@ -7,63 +7,37 @@
     @media(max-width: 480px) {
         padding-bottom: 130px;
     }
-    .title {
-        margin-bottom: 45px;
-    }
-    .form__log-in {
-        margin-right: 50px;
-
-        @media(max-width: 480px) {
-            margin-right: 40px;
-        }
-    }
-}
-.login__email {
-    margin-bottom: 48px;
-
-    @media(max-width: 480px) {
-        margin-bottom: 33px;
-    }
 }
 
-.login__password {
-    margin-bottom: 22px;  
-    
-    @media(max-width: 480px) {
-        margin-bottom: 17px;
-    }
+.login .form__wrap-input {
+    margin-top: 35px;
 }
-.login__remember {
-    margin-bottom: 32px;
-    margin-right: 28px;
-    
+
+.login .form__log-in {
+    margin-right: 50px;
+
     @media(max-width: 480px) {
-        margin-bottom: 20px;
+        margin-right: 35px;
     }
     @media(max-width: 350px) {
         margin-right: 15px;
     }
 }
-.login__forget-password {
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.3px;
-    text-decoration-line: underline;
-    color: #4A90E2;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    margin-bottom: 31px;
-    cursor: pointer;
 
+.login__remember {
+    margin: 25px 28px 32px 0;
+    
     @media(max-width: 480px) {
-        margin-bottom: 33px;
+        margin-bottom: 20px;
+    }
+    @media(max-width: 350px) {
+        margin-right: 5px;
     }
 }
+
 .login__log-up {
     font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
     text-decoration-line: underline;
     color: $red;
 }

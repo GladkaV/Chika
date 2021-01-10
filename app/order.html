@@ -106,8 +106,8 @@
                                                 </div>
                                             </div>
                                             <div class="new-customer__tabs-btn" style="overflow:auto;">
-                                                <button class="new-customer__tabs-prev" type="button">Previous</button>
-                                                <button class="new-customer__tabs-next active" type="button">Next</button>
+                                                <button class="new-customer__tabs-prev btn-border" type="button">Previous</button>
+                                                <button class="new-customer__tabs-next btn-border active" type="button">Next</button>
                                             </div>
                                         </form>
                                     </div>
@@ -124,8 +124,8 @@
                                                 <label class="form__placeholder" for="order-password">Пароль</label>
                                                 <label class="form__password-checkbox"><input type="checkbox"></label>
                                             </div>
-                                            <a class="login__forget-password" href="#">Забыли пароль?</a>
-                                            <button class="form__log-in" type="submit">Войти</button>
+                                            <a class="form__forget-password" href="#">Забыли пароль?</a>
+                                            <button class="form__log-in btn-border" type="submit">Войти</button>
                                         </form>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                             <!-- start aside -->
                             <form class="order__aside">
                                 <div class="order__aside-items">
-                                    <div class="order__aside-item">
+                                    <div class="order__aside-item"  data-price="400.60">
                                         <div class="order__aside-img">
                                             <img src="img/product/item-1.png" alt="">
                                         </div>
@@ -143,19 +143,20 @@
                                                 крем-гель, эссенция и
                                                 крем Dr.Jart+ Vital Hydra Kit 15ml
                                             </h6>
-                                            <div class="order__aside-price">
-                                                400.
-                                                <span class="order__item-penny">60</span>
-                                                <span class="order__item-currency">грн</span>
+                                            <div class="order__aside-price price">
+                                                <span class="price__num">400.</span>
+                                                <span class="price__penny">60</span>
+                                                <span class="price__currency">грн</span>
                                             </div>
                                             <div class="quantity">
-                                                <input class="quantity__input" data-price="400.60" type="number" min="1"
+                                                <input class="quantity__input" type="number" min="1"
                                                     step="1" value="1">
                                             </div>
                                             <button class="order__aside-remove"></button>
                                         </div>
                                     </div>
-                                    <div class="order__aside-item">
+
+                                    <div class="order__aside-item"  data-price="100.00">
                                         <div class="order__aside-img">
                                             <img src="img/product/item-4.png" alt="">
                                         </div>
@@ -163,19 +164,19 @@
                                             <h6 class="order__aside-title">
                                                 Антибактериальный спрей для рук "sweet mint"
                                             </h6>
-                                            <div class="order__aside-price">
-                                                100.
-                                                <span class="order__item-penny">00</span>
-                                                <span class="order__item-currency">грн</span>
+                                            <div class="order__aside-price price">
+                                                <span class="price__num">100.</span>
+                                                <span class="price__penny">00</span>
+                                                <span class="price__currency">грн</span>
                                             </div>
                                             <div class="quantity">
-                                                <input class="quantity__input" data-price="100.00" type="number" min="1"
-                                                    step="1" value="1">
+                                                <input class="quantity__input" type="number" min="1" step="1" value="1">
                                             </div>
                                             <button class="order__aside-remove"></button>
                                         </div>
                                     </div>
-                                    <div class="order__aside-item">
+
+                                    <div class="order__aside-item" data-price="400.60">
                                         <div class="order__aside-img">
                                             <img src="img/product/item-2.png" alt="">
                                         </div>
@@ -185,29 +186,30 @@
                                                 крем-гель, эссенция и
                                                 крем Dr.Jart+ Vital Hydra Kit 15ml
                                             </h6>
-                                            <div class="order__aside-price">
-                                                400.
-                                                <span class="order__item-penny">60</span>
-                                                <span class="order__item-currency">грн</span>
+                                            <div class="order__aside-price price">
+                                                <span class="price__num">400.</span>
+                                                <span class="price__penny">60</span>
+                                                <span class="price__currency">грн</span>
                                             </div>
                                             <div class="quantity">
-                                                <input class="quantity__input" data-price="400.60" type="number" min="1"
-                                                    step="1" value="1">
+                                                <input class="quantity__input" type="number" min="1" step="1" value="1">
                                             </div>
                                             <button class="order__aside-remove"></button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="order__aside-sum">
-                                    <div class="order__aside-text">
+
+                                <div class="order__aside-sum total-sum">
+                                    <div class="total-sum__text">
                                         Общая стоимость заказа:
                                     </div>
-                                    <div class="order__aside-num">
-                                        <span class="order__aside-number"></span>.
-                                        <span class="order__aside-penny">00</span>
-                                        <span class="order__aside-currency">грн.</span>
+                                    <div class="total-sum__price">
+                                        <span class="total-sum__num">0.</span>
+                                        <span class="total-sum__penny">00</span>
+                                        <span class="total-sum__currency">грн</span>
                                     </div>
                                 </div>
+
                                 <div class="order__checkout">
                                     <label class="form__checkbox order__checkbox"><input type="checkbox" name="don't-call">
                                         <span></span>
@@ -230,10 +232,11 @@
         @@include("./blocks/footer/_footer.html")
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-
+    
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>
