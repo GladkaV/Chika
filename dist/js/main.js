@@ -14,6 +14,19 @@ $(function () {
         }
     });
 
+    // плавный скрол
+    $('.footer__btn').on('click', function () {
+        var el = $(this);
+        var dest = el.attr('href');
+        if (dest !== undefined && dest !== '') {
+            $('html').animate({
+                scrollTop: $(dest).offset().top
+            }, 500
+            );
+        }
+        return false;
+    });
+
     // page one good (star)
     initializationRateYo($(".good__starts"));
 
@@ -317,7 +330,7 @@ $(function () {
     })
 
     // header lang
-    $('.header__lang-item a').click(function () {
+    $('.header__lang-item a').on('click', function () {
         $('.header__lang-item').removeClass("active");
         $(this).parent().addClass("active");
     })
@@ -325,7 +338,7 @@ $(function () {
     $('.header__content-btn').magnificPopup({});
 
     // header user
-    $('.header__content-item.user').click(function () {
+    $('.header__content-item.user').on('click', function () {
         $('.header__user-list').toggleClass('active');
     })
 
@@ -351,7 +364,6 @@ $(function () {
     const topMain = parseFloat(topScroll) - parseFloat($(`.header__top-inner`).css('height'));
 
     $(window).scroll(function () {
-        $.magnificPopup.close();
         let top = $(document).scrollTop();
         
         if (top > topScroll) {
@@ -367,6 +379,8 @@ $(function () {
 
     // form
     $('form').on("submit", function (event) {
+        event.preventDefault();
+
         // page registration (mask phone)
         if ($(this).hasClass('registration__form')) {
             let password = $(this).find('#registration-password');
@@ -379,11 +393,6 @@ $(function () {
                 }, 2000);
             }
         }
-
-        event.preventDefault();
-        console.log($(this).serialize());
-
-        $.magnificPopup.close();
 
         // page reviews (popup)
         if ($(this).hasClass('reviews__form')) {
@@ -409,6 +418,9 @@ $(function () {
             $("#reviewsItemTemplate").tmpl(itemInfo).appendTo(".reviews__inner");
             initializationRateYo($(".reviews__item-star"));
         }
+
+        $.magnificPopup.close();
+        console.log($(this).serialize());
     });
 
     // page login (remember)

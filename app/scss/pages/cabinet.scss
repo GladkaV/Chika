@@ -150,6 +150,7 @@
         flex-wrap: wrap;
         padding-bottom: 20px;
         row-gap: 10px;
+        column-gap: 15px;
         padding-left: 0;
         padding-right: 0;
     } 
@@ -157,6 +158,12 @@
         row-gap: 0;
         padding-top: 20px;
     }
+}
+
+.orders__item .price {
+    @media (max-width: 450px) {
+        align-self: flex-start;
+    } 
 }
 
 .orders__item-info {

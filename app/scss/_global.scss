@@ -3,7 +3,6 @@
 html{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
 }
 
 html,
@@ -160,6 +159,7 @@ body {
     letter-spacing: 0.3px;
     height: 36px;
     transition: all .3s;
+    border-radius: 0;
 
     &:focus {
         border-color: $red;
@@ -262,14 +262,6 @@ body {
     display: none;
 }
 
-.form__checkbox input:checked + span {
-    background-image: url(../../img/arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: $red; 
-    border-color: transparent;
-}
-
 .form__checkbox span {
     width: 16px;
     height: 16px;
@@ -280,6 +272,16 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    background-image: url(../../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0;
+}
+
+.form__checkbox input:checked + span {
+    background-color: $red; 
+    background-size: auto;
+    border-color: transparent;
 }
 
 .form__forget-password {
@@ -567,15 +569,12 @@ body {
     display: none;
 }
 
-.filter__list-checkbox input:checked span {
-    background-image: url(../../img/check.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .filter__checkbox {
     background-color: #FFFFFF;
     background-position: center 2px;
+    background-image: url(../img/check.svg);
+    background-size: c0over;
+    background-repeat: no-repeat;
     border: 1px solid #E1E1E1;
     border-radius: 4px;
     display: inline-block;
@@ -585,6 +584,10 @@ body {
     left: 0;
     top: -2px;
     transition: all .2s;
+}
+
+.filter__list-checkbox input:checked + .filter__checkbox {
+    background-size: cover;
 }
 
 .range-slider {
@@ -1058,6 +1061,10 @@ li.slick-active button {
 
 .product:hover {
     z-index: 10;
+
+    @media(max-width: 650px) {
+        z-index: 4;
+    }
         
     &::before {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.28);
@@ -1104,7 +1111,7 @@ li.slick-active button {
     background-color: transparent;
     border: none;
     position: absolute;
-    right: 29px;
+    right: 20px;
     top: 11px;
     outline: none;
     cursor: pointer;
@@ -1115,11 +1122,11 @@ li.slick-active button {
     transition: all .3s;
 
     @media(max-width: 1000px) {
-        right: 20px;
+        right: 15px;
     }
 
     @media(max-width: 650px) {
-        right: 15px;
+        right: 10px;
         opacity: 1;
         visibility: visible;
     }
@@ -1130,11 +1137,13 @@ li.slick-active button {
         position: absolute;
         width: 26px;
         height: 3px;
+        top: 14px;
+        left: 3px;
         background-color: $dark;
 
         @media(max-width: 450px) {
             width: 20px;
-            top: -8px;
+            left: 6px;
         }
     }
     &::before {
@@ -1170,6 +1179,10 @@ li.slick-active button {
     max-width: 100%;
     height: auto;
     max-height: 100%;
+
+    @media(max-width: 600px) {
+        max-height: 80%;
+    }
 }
 
 .product__img--adaptive {

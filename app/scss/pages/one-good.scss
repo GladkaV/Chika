@@ -648,7 +648,6 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    column-gap: 50px;
 
     @media (max-width:450px) {
         font-size: 15px;
@@ -663,17 +662,30 @@
     text-transform: none;
     color: $red;
     position: relative;
+    padding-left: 25px;
+    margin-left: 25px;
+
+    @media (max-width:450px) {
+        font-size: 14px;
+        padding-left: 18px;
+        margin-left: 18px;
+    }
 }
 
 .product-slider__subtitle::before {
     content: "";
     position: absolute;
-    left: -25px;
+    left: 0;
     top: -17px;
     width: 1px;
     height: 53px;
     border-left: 1px solid #676767;
     transform: rotate(33deg);
+
+    @media (max-width:450px) {
+        height: 35px;
+        top: -9px;
+    }
 }
 
 .product-slider {
